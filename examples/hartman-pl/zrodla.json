@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "retrieved_on": "2026-10-08",
+  "scope": "Publiczny rdzeń UHPC, z odróżnieniem opisu autora od dowodów klinicznych.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Learn from Bill — UHPC Model",
+      "author": "Bill Hartman",
+      "url": "https://billhartmanpt.com/learn-from-bill/",
+      "published_on": null,
+      "kind": "author_website",
+      "read_level": "page_text",
+      "locator": "What is the UHPC Model?",
+      "limitation": "Opis koncepcji autora; nie badanie skuteczności."
+    },
+    {
+      "id": "S02",
+      "title": "Hip and pelvis: relative motion and orientation",
+      "author": "Bill Hartman",
+      "url": "https://billhartmanpt.com/tag/exercises-for-hip-pain/page/2/",
+      "published_on": "2020-03-15",
+      "kind": "author_website",
+      "read_level": "archive_entry_text",
+      "locator": "Padawan Lesson, wpis 15.03.2020",
+      "limitation": "Odczyt opisu wpisu, bez pełnego nagrania."
+    },
+    {
+      "id": "S03",
+      "title": "Sacral movement versus pelvic orientation",
+      "author": "Bill Hartman",
+      "url": "https://billhartmanpt.com/tag/posterior-pelvic-tilt/",
+      "published_on": "2020-04-06",
+      "kind": "author_website",
+      "read_level": "archive_entry_text",
+      "locator": "Wpis 06.04.2020; kontekst oceny również 08.05.2020",
+      "limitation": "Nie zmierzono deformacji miednicy."
+    },
+    {
+      "id": "S04",
+      "title": "Are You Wide or Narrow? — Episode 50",
+      "author": "Bill Hartman, Reconsider",
+      "url": "https://podcasts.apple.com/us/podcast/reconsider-are-you-wide-or-narrow-with-bill-hartman/id1662268221?i=1000677229423",
+      "published_on": "2024-11-17",
+      "kind": "author_podcast",
+      "read_level": "episode_description_and_chapters",
+      "locator": "Takeaways; rozdziały 00:00–06:48, 20:47–28:53",
+      "limitation": "Opis odcinka nie waliduje klasyfikacji."
+    },
+    {
+      "id": "S05",
+      "title": "Structural Biases in Speed & Strength Development",
+      "author": "Bill Hartman, Kevin Neeld",
+      "url": "https://evolvingperformance.buzzsprout.com/2376055/episodes/18549428-structural-biases-in-speed-strength-development-with-bill-hartman",
+      "published_on": "2026-01-30",
+      "kind": "primary_interview",
+      "read_level": "transcript_sections",
+      "locator": "33:42–35:33; 55:47–1:01:50",
+      "limitation": "Wypowiedzi autora, bez niezależnego pomiaru deklarowanych efektów."
+    },
+    {
+      "id": "S06",
+      "title": "Breathing, rib cage and shoulder range",
+      "author": "Bill Hartman",
+      "url": "https://billhartmanpt.com/tag/pump-handle-sternum/page/2/",
+      "published_on": null,
+      "kind": "author_website",
+      "read_level": "archive_entry_text",
+      "locator": "Too Simple Solution: Breathing to expand the rib cage",
+      "limitation": "Opis zastosowania, bez badania porównawczego."
+    },
+    {
+      "id": "S07",
+      "title": "You're Using Side Lying Wrong — Episode 87",
+      "author": "Bill Hartman, Chris Wicus",
+      "url": "https://podcasts.apple.com/us/podcast/youre-using-side-lying-wrong/id1662268221?i=1000762908804",
+      "published_on": "2026-04-21",
+      "kind": "author_podcast",
+      "read_level": "episode_description_and_chapters",
+      "locator": "07:25; 09:10; 21:12",
+      "limitation": "Bez pełnego obejrzenia demonstracji."
+    },
+    {
+      "id": "S08",
+      "title": "You're Using Hook Lying Wrong — Episode 88",
+      "author": "Bill Hartman, Chris Wicus",
+      "url": "https://podcasts.apple.com/us/podcast/youre-using-hook-lying-wrong/id1662268221?i=1000766259818",
+      "published_on": "2026-05-05",
+      "kind": "author_podcast",
+      "read_level": "episode_description_and_chapters",
+      "locator": "03:25; 05:37; 16:06; 19:02",
+      "limitation": "Nie odtwarza szczegółowej instrukcji ćwiczenia."
+    },
+    {
+      "id": "S09",
+      "title": "You're Using Quadruped Wrong",
+      "author": "Bill Hartman, Chris Wicus",
+      "url": "https://podcasts.apple.com/us/podcast/youre-using-quadruped-wrong/id1662268221?i=1000760076535",
+      "published_on": "2026-04-07",
+      "kind": "author_podcast",
+      "read_level": "episode_description_and_chapters",
+      "locator": "03:08; 08:03; 11:22; 16:42",
+      "limitation": "Związki z wynikiem sportowym są deklaracjami autora."
+    },
+    {
+      "id": "S10",
+      "title": "You're Using Half Kneeling Wrong",
+      "author": "Bill Hartman, Chris Wicus",
+      "url": "https://podcasts.apple.com/us/podcast/reconsider-youre-using-half-kneeling-wrong-with-bill/id1662268221?i=1000757091530",
+      "published_on": "2026-03-24",
+      "kind": "author_podcast",
+      "read_level": "episode_description_and_chapters",
+      "locator": "00:00; 04:30; 08:30; 12:30",
+      "limitation": "Wymagania pozycji nie są tu zwalidowanymi kryteriami leczenia."
+    },
+    {
+      "id": "S11",
+      "title": "You're Using Oblique Sitting Wrong",
+      "author": "Bill Hartman, Chris Wicus",
+      "url": "https://podcasts.apple.com/us/podcast/youre-using-oblique-sitting-wrong/id1662268221?i=1000768588068",
+      "published_on": "2026-05-19",
+      "kind": "author_podcast",
+      "read_level": "episode_description_and_chapters",
+      "locator": "00:00; 06:21; 12:17; 19:01",
+      "limitation": "Słowo diagnostic w opisie nie dowodzi trafności diagnostycznej."
+    },
+    {
+      "id": "S12",
+      "title": "Early, Mid and Late Propulsion of the Gait Cycle",
+      "author": "Bill Hartman",
+      "url": "https://billhartmanpt.com/tag/gait/",
+      "published_on": null,
+      "kind": "author_website",
+      "read_level": "archive_entry_text",
+      "locator": "Q & A for The 16% — Early, Mid, and Late Propulsion",
+      "limitation": "Odczyt opisu; bez ustalenia precyzyjnych granic faz."
+    },
+    {
+      "id": "S13",
+      "title": "Contraction of the human diaphragm during rapid postural adjustments",
+      "author": "Hodges PW, Butler JE, McKenzie DK, Gandevia SC",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9423192/",
+      "published_on": "1997-12-01",
+      "kind": "primary_research",
+      "read_level": "abstract",
+      "locator": "PMID 9423192; DOI 10.1111/j.1469-7793.1997.539bb.x",
+      "limitation": "Szybki ruch ramienia; nie badanie UHPC ani leczenia bólu."
+    },
+    {
+      "id": "S14",
+      "title": "Contractions of specific abdominal muscles in postural tasks are affected by respiratory maneuvers",
+      "author": "Hodges PW, Gandevia SC, Richardson CA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9292460/",
+      "published_on": "1997-09",
+      "kind": "primary_research",
+      "read_level": "indexed_title_and_metadata",
+      "locator": "PMID 9292460; DOI 10.1152/jappl.1997.83.3.753",
+      "limitation": "Nie odczytano pełnego abstraktu; odnośnik bibliograficzny, bez oceny szczegółowych wyników."
+    },
+    {
+      "id": "S15",
+      "title": "Q & A for The 16% - Early, Mid, and Late Propulsion of the Gait Cycle",
+      "url": "https://www.youtube.com/watch?v=PQZRlndm4cw",
+      "kind": "author_video",
+      "published_on": "2020-02-17",
+      "accessed_on": "2026-10-08",
+      "read_level": "full_english_automatic_captions; image_unavailable",
+      "locator": "Timestamped findings in analizy-filmow.json",
+      "transcript_sha256": "55d84e7c80380a7c0de5bc9abd6e6efbe524e6e10f66ac63a9751f2d13f47e87",
+      "caption_cues": 82,
+      "limitation": "Automatic captions may contain recognition errors. No visual motion assessment or clinical validation was performed. Publication date comes from the author's matching blog entry."
+    },
+    {
+      "id": "S16",
+      "title": "Q & A for The 16% - Determining Sacral movement vs. Pelvic Orientation (aka pelvic tilt)",
+      "url": "https://www.youtube.com/watch?v=N0GDdA0MPCo",
+      "kind": "author_video",
+      "published_on": "2020-04-06",
+      "accessed_on": "2026-10-08",
+      "read_level": "full_english_automatic_captions; image_unavailable",
+      "locator": "Timestamped findings in analizy-filmow.json",
+      "transcript_sha256": "de1136809c013670eaa223eda573027515fead699fcaf03f30aa46110f9b425c",
+      "caption_cues": 81,
+      "limitation": "Automatic captions may contain recognition errors. No visual motion assessment or clinical validation was performed. Publication date comes from the author's matching blog entry."
+    }
+  ]
+}

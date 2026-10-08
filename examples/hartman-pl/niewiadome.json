@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "unknowns": [
+    {
+      "id": "U01",
+      "question": "Jaka jest powtarzalność i trafność prognostyczna pełnej klasyfikacji ISA Hartmana?",
+      "source_ids": ["S04"],
+      "severity": "medium",
+      "needed": "Odpowiednie badania pomiarowe i prognostyczne; obecne wyszukiwanie nie było systematyczne."
+    },
+    {
+      "id": "U02",
+      "question": "Czy dobór interwencji według UHPC poprawia istotne wyniki bardziej niż odpowiednie alternatywy?",
+      "source_ids": ["S01", "S13", "S14"],
+      "severity": "medium",
+      "needed": "Badania porównawcze odnoszące się do konkretnych populacji i wyników."
+    },
+    {
+      "id": "U03",
+      "question": "Jakie dokładne parametry wykonania i kryteria wyboru stosuje autor w każdej pozycji?",
+      "source_ids": ["S07", "S08", "S09", "S10", "S11"],
+      "severity": "low",
+      "needed": "Pełne publiczne demonstracje lub dostęp do materiałów przekazanych przez użytkownika."
+    },
+    {
+      "id": "U04",
+      "question": "Jak duże zmiany geometrii miednicy i ciśnień występują w postulowanych strategiach?",
+      "source_ids": ["S03", "S05"],
+      "severity": "medium",
+      "needed": "Bezpośrednie pomiary odpowiednich wielkości; obserwacja ruchu ich nie zastępuje."
+    },
+    {
+      "id": "U05",
+      "question": "Jaki mechanizm odpowiada za zmianę w konkretnym reteście i jak długo utrzymuje się efekt?",
+      "source_ids": ["S05"],
+      "severity": "medium",
+      "needed": "Pomiary powtarzane i projekt pozwalający rozróżnić konkurencyjne wyjaśnienia."
+    },
+    {
+      "id": "U06",
+      "question": "Jak precyzyjnie fazy propulsion UHPC odnoszą się do standardowej analizy chodu?",
+      "source_ids": ["S12"],
+      "severity": "low",
+      "needed": "Pełna definicja autora i bezpośrednie porównanie terminów oraz pomiarów."
+    },
+    {
+      "id": "U07",
+      "question": "Co dokładnie przedstawiają demonstracje ruchu miednicy w obu filmach?",
+      "needed": "Obejrzeć pełne fragmenty demonstracji; napisy są dostępne, ale obraz nie załadował się w sesji. Nie wnioskować o widocznym ruchu wyłącznie z tekstu.",
+      "severity": "medium",
+      "source_ids": ["S15", "S16"]
+    }
+  ]
+}
