@@ -62,3 +62,5 @@ Szablon dla terapeuty. W repozytorium zapisuj wyłącznie puste formularze lub f
 - Czy utrzymujemy, progresujemy, skracamy przygotowanie lub zmieniamy hipotezę?
 - Pochodzenie decyzji: opis Hartmana / zalecenie kliniczne / nasza próba.
 - Brakujące informacje i plan ich sprawdzenia:
+
+Wybór dalszego kroku opisuje [przewodnik kolejnej wizyty](decyzje-kolejna-wizyta.md). Ustalony plan możesz zapisać przez [lokalny eksporter prescription](prescription.md).

@@ -8,6 +8,8 @@ Niezależne opracowanie publicznie opisanego modelu UHPC Billa Hartmana dla fizj
 
 **Do wdrożenia w gabinecie:** [framework badania i prescription](framework-gabinet.md) prowadzi od celu pacjenta do testu, jednej zmiany, dawki i progresji. Zawiera trzy konkretne ścieżki: ból rzepkowo-udowy, split squat i sięganie ponad głowę, a także zasady stosowania po ACL. Użyj [pustej karty wizyty](karta-wizyty.md) i [danych ścieżek](sciezki-kliniczne.json). To nasza synteza do decyzji terapeuty; dawki nie są przypisane Hartmanowi, a JSON nie jest jeszcze integracją z generatorem.
 
+**Kolejne wizyty i plan dla pacjenta:** [osiem sytuacji decyzyjnych](decyzje-kolejna-wizyta.md) wyjaśnia, co zrobić przy braku transferu, narastaniu objawów z dawką oraz zależności od wskazówek. Nowy przypadek koszykarza i ustalenia **N01–N11** pochodzą z 24,5 minuty kolejnych fragmentów dwóch zachowanych transkrypcji — bez nowych pobrań. [Lokalne narzędzie prescription](prescription.md) eksportuje dokładnie wskazaną listę ćwiczeń z jawnie wpisanymi dawkami; notatki terapeuty można dołączyć opcjonalnie. Nie jest jeszcze podłączone do generatora na stronie.
+
 1. Zacznij od [konkretnych testów i ćwiczeń](konkretne-przypadki.md): 11 kart z ustawieniem, obserwowanym zachowaniem, kryterium sprawdzenia i odnośnikami czasowymi. Przypadek barku prowadzi od pomiaru przez wybór ćwiczenia do testu przy ścianie. Osobny przypadek wstawania określa wysokość siedziska, ustawienie stóp i oczekiwane zmiany.
 2. Następnie przejdź do [rekonstrukcji modelu](model-po-ludzku.md) i [przewodnika](przewodnik.md). Osiem krótkich lekcji buduje pojęcia od podstaw.
 3. Zajrzyj do [słownika](slownik.md), gdy trafisz na ISA, relative motion, compression lub propulsion.

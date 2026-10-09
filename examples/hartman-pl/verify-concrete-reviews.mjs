@@ -7,18 +7,28 @@ import { parseCaptions, validateFindings, videoIdentity } from "./youtube.mjs";
 
 const directory = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
-const followup = args[0] === "--followup";
-if (followup) args.shift();
+const mode = ["--followup", "--decisions"].includes(args[0])
+  ? args.shift()
+  : "";
+const followup = mode === "--followup";
 assert(args.length === 0 || (args.length === 2 && args[0] === "--captions"));
 const captions = args[1] ? resolve(args[1]) : null;
-const prefix = followup ? "M" : "K";
-const ledgerFile = followup ? "progresje-filmy.json" : "konkretne-filmy.json";
-const documentFile = followup
-  ? "progresje-i-pomiary.md"
-  : "konkretne-przypadki.md";
-const verificationFile = followup
-  ? "followup-reviews-verification.json"
-  : "concrete-reviews-verification.json";
+const configurations = {
+  "": [
+    "K", "konkretne-filmy.json", "konkretne-przypadki.md",
+    "concrete-reviews-verification.json",
+  ],
+  "--followup": [
+    "M", "progresje-filmy.json", "progresje-i-pomiary.md",
+    "followup-reviews-verification.json",
+  ],
+  "--decisions": [
+    "N", "decyzje-filmy.json", "decyzje-kolejna-wizyta.md",
+    "decisions-reviews-verification.json",
+  ],
+};
+const [prefix, ledgerFile, documentFile, verificationFile] =
+  configurations[mode];
 const data = JSON.parse(await readFile(resolve(directory, ledgerFile), "utf8"));
 const document = await readFile(resolve(directory, documentFile), "utf8");
 
@@ -125,6 +135,29 @@ async function checkLongestCohort() {
   return checkpoint.films.length;
 }
 
+async function checkRetainedExtensions() {
+  const previous = [];
+  for (const name of ["konkretne-filmy.json", "progresje-filmy.json"]) {
+    const ledger = JSON.parse(await readFile(resolve(directory, name), "utf8"));
+    previous.push(...ledger.reviews);
+  }
+  for (const review of data.reviews) {
+    const matches = previous.filter(
+      (item) => item.video_id === review.video_id,
+    );
+    assert(matches.length > 0, "Missing retained source: " + review.video_id);
+    for (const older of matches) {
+      assert.equal(older.transcript_sha256, review.transcript_sha256);
+      for (const [start, end] of review.read_intervals)
+        assert(
+          older.read_intervals.every(([a, b]) => end <= a || start >= b),
+          "New read interval overlaps the earlier checkpoint.",
+        );
+    }
+  }
+}
+
+if (mode === "--decisions") await checkRetainedExtensions();
 checkAcquisition(data.acquisition, data.summary);
 assert.equal(data.reviews.length, data.summary.reviewed_sources);
 assert.equal(

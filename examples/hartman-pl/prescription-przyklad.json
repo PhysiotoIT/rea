@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "title_pl": "Fikcyjny przykład: plan ćwiczeń kolana",
+  "goal_pl": "Łatwiejsze schodzenie ze schodów.",
+  "monitoring_pl": "Zapisz reakcję podczas treningu, po nim i następnego dnia. Trzymaj się tolerancji uzgodnionej z terapeutą. Jeśli wyraźnie pogarsza się codzienna funkcja lub pojawia się nowy obrzęk, skontaktuj się z terapeutą przed progresją.",
+  "review_pl": "Na kolejnej wizycie porównamy schody i zejście z tego samego stopnia oraz tolerowane obciążenie.",
+  "exercises": [
+    {
+      "id": "TRX-BOX",
+      "name_pl": "Przysiad z TRX do boxu",
+      "side_pl": "Obie nogi",
+      "setup_pl": "Stań twarzą do stabilnego zakotwiczenia. Trzymaj uchwyty. Box i ustawienie stóp takie jak dobrane na wizycie. Korzystaj z ustalonej pomocy rąk.",
+      "cues_pl": [
+        "Dotknij boxu bez opadania i wstań.",
+        "Zachowaj uzgodnioną głębokość i pomoc rąk."
+      ],
+      "dose_pl": "Przykład do indywidualnego doboru: 2 serie po 8 powtórzeń, odpoczynek 90 sekund.",
+      "frequency_pl": "Przykład do indywidualnego doboru: 2 razy w tygodniu; pozostałe obciążenia zgodnie z planem.",
+      "progression_pl": "Po powtarzalnie dobrej tolerancji zmniejsz pomoc rąk zgodnie z ustaleniem. Zachowaj wysokość boxu i liczbę powtórzeń.",
+      "regression_pl": "Przy przekroczeniu uzgodnionej tolerancji wróć do większej pomocy. Dalsze pogorszenie wymaga kontaktu z terapeutą."
+    },
+    {
+      "id": "KNEE-EXT",
+      "name_pl": "Wyprost kolana na maszynie",
+      "side_pl": "Strona ustalona na wizycie",
+      "setup_pl": "Usiądź w ustawieniu dobranym na wizycie. Zachowaj ustalony zakres ruchu i wybrany ciężar.",
+      "cues_pl": [
+        "Wyprostuj kolano w uzgodnionym zakresie i wróć spokojnie."
+      ],
+      "dose_pl": "Przykład do indywidualnego doboru: 2 serie po 10 powtórzeń, odpoczynek 90 sekund; ciężar pozwala wykonać około 3 dodatkowe powtórzenia.",
+      "frequency_pl": "Przykład do indywidualnego doboru: 2 razy w tygodniu.",
+      "progression_pl": "Zwiększ ciężar o ustalony krok po powtarzalnie dobrej tolerancji; zachowaj zakres i liczbę powtórzeń.",
+      "regression_pl": "Zmniejsz ciężar, jeżeli przekraczasz uzgodnioną tolerancję. Nowy obrzęk lub pogorszenie codziennej funkcji wymaga ponownej oceny."
+    }
+  ],
+  "clinical_notes_pl": [
+    "Wyłącznie fikcyjny przykład dokumentacji; dobór ćwiczeń i dawek wymaga badania.",
+    "Brak natychmiastowego transferu nie wyklucza tolerowanej regresji treningowej."
+  ]
+}

@@ -145,4 +145,6 @@ Każde ćwiczenie otrzymuje: cel, wariant i stronę, ustawienie, 1–2 wskazówk
 
 Użyj [karty wizyty](karta-wizyty.md) i [trzech ustrukturyzowanych ścieżek](sciezki-kliniczne.json). JSON jest przykładem organizacji danych do późniejszej integracji. Nie został podłączony do działającego generatora i nie wybiera ćwiczeń automatycznie.
 
+Przejdź do [decyzji na kolejnej wizycie](decyzje-kolejna-wizyta.md), gdy potrzebujesz ustalić odpowiedź na brak transferu, zmianę tolerancji dawki lub zależność od coachingu. [Eksporter prescription](prescription.md) przygotowuje plan z jawnie wpisanych ćwiczeń i dawek, bez dodawania pozycji z biblioteki.
+
 Filmowe odnośniki pokazują wypowiedzi autora; ich obraz nadal wymaga kontroli. Dawkowanie i proponowane retesty w tym dokumencie są nasze. Pełne napisy, liczebności korpusu oraz dotychczasowy zakres odczytu pozostają opisane w istniejących rejestrach K/M.
