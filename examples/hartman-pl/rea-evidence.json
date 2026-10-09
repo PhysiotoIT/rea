@@ -1,0 +1,2448 @@
+{
+  "artifacts": [
+    {
+      "architecture": null,
+      "digest": {
+        "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+      },
+      "format": "file"
+    },
+    {
+      "architecture": null,
+      "digest": {
+        "sha256": "2b38de00c51a9ae4c1fdfc942f6a2c2c06a8819cfee2a06f002d2d98ea454bff"
+      },
+      "format": "file"
+    },
+    {
+      "architecture": null,
+      "digest": {
+        "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+      },
+      "format": "file"
+    }
+  ],
+  "captures": [],
+  "environments": [],
+  "providers": [
+    {
+      "id": "hartman-pl-curation",
+      "name": "Manual annotations of public sources; not a clinical measurement provider",
+      "version": "1.0"
+    }
+  ],
+  "records": [
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_025d6f61cb0a38234a04bbc222bb8b5b00b7010a38d26523e3e18fdfc252f5cb",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Opis koncepcji autora; nie badanie skuteczności."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://billhartmanpt.com/learn-from-bill/"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman",
+        "id": "S01",
+        "kind": "author_website",
+        "limitation": "Opis koncepcji autora; nie badanie skuteczności.",
+        "locator": "What is the UHPC Model?",
+        "published_on": null,
+        "read_level": "page_text",
+        "title": "Learn from Bill — UHPC Model",
+        "url": "https://billhartmanpt.com/learn-from-bill/"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S01",
+        "url": "https://billhartmanpt.com/learn-from-bill/"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_0d4430efc869b8646b57ac59216f1df030034b68f7fda2cf128d4439a7c9638c",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Odczyt opisu; bez ustalenia precyzyjnych granic faz."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://billhartmanpt.com/tag/gait/"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman",
+        "id": "S12",
+        "kind": "author_website",
+        "limitation": "Odczyt opisu; bez ustalenia precyzyjnych granic faz.",
+        "locator": "Q & A for The 16% — Early, Mid, and Late Propulsion",
+        "published_on": null,
+        "read_level": "archive_entry_text",
+        "title": "Early, Mid and Late Propulsion of the Gait Cycle",
+        "url": "https://billhartmanpt.com/tag/gait/"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S12",
+        "url": "https://billhartmanpt.com/tag/gait/"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_193da43773a1453973b25adb693d33b7374a1f0ebeec74d5e738d0278b6e3377",
+      "evidence_links": [
+        "ev_5dfdd6a73e282e1c4a17153a9d69eaa127016f7ee36b8037f35e5ba1c8734cd3"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Deklaracja modelowa; nie niezależny pomiar jej skutków."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C05"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Deklaracja modelowa; nie niezależny pomiar jej skutków.",
+        "id": "C05",
+        "kind": "opis_autora",
+        "source_ids": ["S05"],
+        "text": "Strategia oddychania zależy w jego wyjaśnieniach od wymagań zadania."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C05", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_2001e5175c138401202a884f6d67cabbc899e70928ba645ed7264fdb8657e5b4",
+      "evidence_links": [
+        "ev_bd2aa7c5f836930c4b48f2200fdf1f4a3e4125489bb5e557c7cf70b0f6851d09"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Nie testowano algorytmu UHPC ani doboru leczenia według ISA."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C13"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Nie testowano algorytmu UHPC ani doboru leczenia według ISA.",
+        "id": "C13",
+        "kind": "badanie_podstawowe",
+        "source_ids": ["S13"],
+        "text": "W eksperymencie przepona uczestniczyła w kontroli posturalnej przy szybkim ruchu ramienia."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C13", "kind": "badanie_podstawowe" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_2093f0fb5dc546943514dffa34aec3c41a98d783b2541eb2e5f37f8a2e68f689",
+      "evidence_links": [
+        "ev_9f73e3921896cff3e77c302a37e4938e32f8856e4c2999f94cffd8572117db01",
+        "ev_edc765641acb091192dddaf0049bda305a8cd72592805a70af6bb368801276b0"
+      ],
+      "limitations": [
+        "Manual interpretation of automatic captions; not an automatic clinical inference.",
+        "Visual review status: not_required",
+        "Odtworzenie koncepcji z 2020 r.; brak niezależnej weryfikacji jej przewidywań."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://www.youtube.com/watch?v=N0GDdA0MPCo&t=240s"
+        }
+      ],
+      "normalized_result": {
+        "clinical_validation": "not_performed",
+        "confidence": "analyst-inference",
+        "cue_ids": [
+          "cue-0049",
+          "cue-0050",
+          "cue-0051",
+          "cue-0052",
+          "cue-0053",
+          "cue-0054",
+          "cue-0055",
+          "cue-0056",
+          "cue-0057",
+          "cue-0058",
+          "cue-0059",
+          "cue-0060",
+          "cue-0061",
+          "cue-0062",
+          "cue-0063",
+          "cue-0064",
+          "cue-0065",
+          "cue-0066",
+          "cue-0067",
+          "cue-0068",
+          "cue-0069",
+          "cue-0070",
+          "cue-0071",
+          "cue-0072",
+          "cue-0073",
+          "cue-0074",
+          "cue-0075",
+          "cue-0076",
+          "cue-0077"
+        ],
+        "end": 377,
+        "id": "P3",
+        "kind": "author_claim",
+        "limitation": "Odtworzenie koncepcji z 2020 r.; brak niezależnej weryfikacji jej przewidywań.",
+        "source_url": "https://www.youtube.com/watch?v=N0GDdA0MPCo&t=240s",
+        "start": 240,
+        "summary_pl": "Skrajne narrow ISA opisuje przez ekspansję, a wide ISA przez kompresję. Wdechowy i wydechowy oznaczają tu strategie związane z budową ciała.",
+        "visual_review": "not_required"
+      },
+      "operation": "record-timestamped-interpretation",
+      "parameters": { "finding_id": "P3", "video_id": "N0GDdA0MPCo" },
+      "predicate_type": "hartman-pl.video-interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "2b38de00c51a9ae4c1fdfc942f6a2c2c06a8819cfee2a06f002d2d98ea454bff"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/analizy-filmow.json",
+        "name": "analizy-filmow.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_23055e99eb77df48b6a7f4943542932d462c93c430cab25d40fa8df9da8a332c",
+      "evidence_links": [
+        "ev_0d4430efc869b8646b57ac59216f1df030034b68f7fda2cf128d4439a7c9638c"
+      ],
+      "limitations": [
+        "Artifact identity is unavailable for this observation.",
+        "An open review question; no resolution or clinical verification is claimed."
+      ],
+      "locations": [],
+      "normalized_result": {
+        "needed": "Pełna definicja autora i bezpośrednie porównanie terminów oraz pomiarów.",
+        "question": "Jak precyzyjnie fazy propulsion UHPC odnoszą się do standardowej analizy chodu?"
+      },
+      "operation": "record-unknown",
+      "parameters": { "local_id": "U06" },
+      "predicate_type": "rea.residual-unknown-mutation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": null
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_29c925e70b47e9fae180b1bc3f61a78b2bbc855f557b4229e640a9095236f824",
+      "evidence_links": [],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Zasada interpretacji eksperymentu; bez diagnozowania pacjenta."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C16"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Zasada interpretacji eksperymentu; bez diagnozowania pacjenta.",
+        "id": "C16",
+        "kind": "interpretacja_dydaktyczna",
+        "source_ids": [],
+        "text": "Korzystny retest nie identyfikuje samodzielnie mechanizmu przyczynowego poprawy."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": {
+        "finding_id": "C16",
+        "kind": "interpretacja_dydaktyczna"
+      },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_2e5ac5dd44561453d56e179be22f6b974c8527dd2495e85c1c4da4176abe8163",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Słowo diagnostic w opisie nie dowodzi trafności diagnostycznej."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://podcasts.apple.com/us/podcast/youre-using-oblique-sitting-wrong/id1662268221?i=1000768588068"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman, Chris Wicus",
+        "id": "S11",
+        "kind": "author_podcast",
+        "limitation": "Słowo diagnostic w opisie nie dowodzi trafności diagnostycznej.",
+        "locator": "00:00; 06:21; 12:17; 19:01",
+        "published_on": "2026-05-19",
+        "read_level": "episode_description_and_chapters",
+        "title": "You're Using Oblique Sitting Wrong",
+        "url": "https://podcasts.apple.com/us/podcast/youre-using-oblique-sitting-wrong/id1662268221?i=1000768588068"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S11",
+        "url": "https://podcasts.apple.com/us/podcast/youre-using-oblique-sitting-wrong/id1662268221?i=1000768588068"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_2ea2a82dca0c9af3caf8e0e69682d649a222541d979611f6e8073a151fd6db72",
+      "evidence_links": [
+        "ev_92f0953785361886577d685b932ec6fda1804a70c8485a8979b6ddd16255cdc2"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Brak oceny przewagi klinicznej tego wyjaśnienia."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C04"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Brak oceny przewagi klinicznej tego wyjaśnienia.",
+        "id": "C04",
+        "kind": "opis_autora",
+        "source_ids": ["S06"],
+        "text": "Autor rozpatruje compression i expansion w kontekście celu ruchowego."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C04", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_3ca07b0ff5f9d7be26a4edf65541d34d7372063e6a9e79801b2dc3e1c98adbcf",
+      "evidence_links": [
+        "ev_5dfdd6a73e282e1c4a17153a9d69eaa127016f7ee36b8037f35e5ba1c8734cd3"
+      ],
+      "limitations": [
+        "Artifact identity is unavailable for this observation.",
+        "An open review question; no resolution or clinical verification is claimed."
+      ],
+      "locations": [],
+      "normalized_result": {
+        "needed": "Pomiary powtarzane i projekt pozwalający rozróżnić konkurencyjne wyjaśnienia.",
+        "question": "Jaki mechanizm odpowiada za zmianę w konkretnym reteście i jak długo utrzymuje się efekt?"
+      },
+      "operation": "record-unknown",
+      "parameters": { "local_id": "U05" },
+      "predicate_type": "rea.residual-unknown-mutation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": null
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_3da20c11d480531d1fa7f4da344e365253d55b16440e31397a5fd3e1b8444822",
+      "evidence_links": [
+        "ev_9f73e3921896cff3e77c302a37e4938e32f8856e4c2999f94cffd8572117db01",
+        "ev_edc765641acb091192dddaf0049bda305a8cd72592805a70af6bb368801276b0"
+      ],
+      "limitations": [
+        "Manual interpretation of automatic captions; not an automatic clinical inference.",
+        "Visual review status: not_required",
+        "Author's statement; not independent clinical validation."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://www.youtube.com/watch?v=N0GDdA0MPCo&t=65s"
+        }
+      ],
+      "normalized_result": {
+        "clinical_validation": "not_performed",
+        "confidence": "analyst-inference",
+        "cue_ids": ["cue-0014", "cue-0015", "cue-0016", "cue-0017", "cue-0018"],
+        "end": 87,
+        "id": "P1",
+        "kind": "author_claim",
+        "source_url": "https://www.youtube.com/watch?v=N0GDdA0MPCo&t=65s",
+        "start": 65,
+        "summary_pl": "Hartman rozróżnia ruch części miednicy względem siebie i zmianę ustawienia całej miednicy w przestrzeni.",
+        "visual_review": "not_required"
+      },
+      "operation": "record-timestamped-interpretation",
+      "parameters": { "finding_id": "P1", "video_id": "N0GDdA0MPCo" },
+      "predicate_type": "hartman-pl.video-interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "2b38de00c51a9ae4c1fdfc942f6a2c2c06a8819cfee2a06f002d2d98ea454bff"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/analizy-filmow.json",
+        "name": "analizy-filmow.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_4d6c97aaad1c746eefe5c59b791b619f652ea5ca119e11edcfacc14cd8c9a278",
+      "evidence_links": [
+        "ev_9f73e3921896cff3e77c302a37e4938e32f8856e4c2999f94cffd8572117db01",
+        "ev_edc765641acb091192dddaf0049bda305a8cd72592805a70af6bb368801276b0"
+      ],
+      "limitations": [
+        "Manual interpretation of automatic captions; not an automatic clinical inference.",
+        "Visual review status: pending",
+        "Przykład dydaktyczny autora, nie norma ROM ani zweryfikowana reguła diagnostyczna."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://www.youtube.com/watch?v=N0GDdA0MPCo&t=123s"
+        }
+      ],
+      "normalized_result": {
+        "clinical_validation": "not_performed",
+        "confidence": "analyst-inference",
+        "cue_ids": [
+          "cue-0026",
+          "cue-0027",
+          "cue-0028",
+          "cue-0029",
+          "cue-0030",
+          "cue-0031",
+          "cue-0032",
+          "cue-0033",
+          "cue-0034",
+          "cue-0035",
+          "cue-0036",
+          "cue-0037",
+          "cue-0038",
+          "cue-0039",
+          "cue-0040",
+          "cue-0041",
+          "cue-0042",
+          "cue-0043",
+          "cue-0044",
+          "cue-0045",
+          "cue-0046",
+          "cue-0047"
+        ],
+        "end": 232,
+        "id": "P2",
+        "kind": "author_claim",
+        "limitation": "Przykład dydaktyczny autora, nie norma ROM ani zweryfikowana reguła diagnostyczna.",
+        "source_url": "https://www.youtube.com/watch?v=N0GDdA0MPCo&t=123s",
+        "start": 123,
+        "summary_pl": "Przykład ER 75° i IR 25° ilustruje jego zdaniem zachowaną ruchomość z przewagą ER. Utratę zakresu łączy ze zmianą orientacji.",
+        "visual_review": "pending"
+      },
+      "operation": "record-timestamped-interpretation",
+      "parameters": { "finding_id": "P2", "video_id": "N0GDdA0MPCo" },
+      "predicate_type": "hartman-pl.video-interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "2b38de00c51a9ae4c1fdfc942f6a2c2c06a8819cfee2a06f002d2d98ea454bff"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/analizy-filmow.json",
+        "name": "analizy-filmow.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_51cdaf22e7f6a8e1fdc58c6a138cf9c76922277b0e0f1160d58881a36911fe07",
+      "evidence_links": [
+        "ev_2e5ac5dd44561453d56e179be22f6b974c8527dd2495e85c1c4da4176abe8163"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Nie jest tutaj zwalidowanym testem diagnostycznym."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C11"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Nie jest tutaj zwalidowanym testem diagnostycznym.",
+        "id": "C11",
+        "kind": "opis_autora",
+        "source_ids": ["S11"],
+        "text": "Siad skośny służy autorowi do sprawdzania zachowania przy innych wymaganiach podparcia."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C11", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_57ec1fe0317224492488e5768fef079ab561d2aa566eb8b35ee63aa738b1ea96",
+      "evidence_links": [
+        "ev_b35b26557731e484c94af5ed75eb6c1236b10d0f28eeadf0369d474a1ce78ff5"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Opis pojęć, nie rozpoznanie przyczyny bólu."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C02"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Opis pojęć, nie rozpoznanie przyczyny bólu.",
+        "id": "C02",
+        "kind": "opis_autora",
+        "source_ids": ["S02"],
+        "text": "Hartman rozróżnia ruch względny biodra i orientację miednicy."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C02", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_5ac2ff505ee92c76c974c6ee51678ef25ff700676a98f56a64ea5e0169b8249b",
+      "evidence_links": [
+        "ev_025d6f61cb0a38234a04bbc222bb8b5b00b7010a38d26523e3e18fdfc252f5cb"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Stanowisko autora; skuteczność całego modelu nie została tutaj oceniona."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C01"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Stanowisko autora; skuteczność całego modelu nie została tutaj oceniona.",
+        "id": "C01",
+        "kind": "opis_autora",
+        "source_ids": ["S01"],
+        "text": "UHPC łączy strukturę, oddychanie, transfer energii i warunki zadania."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C01", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_5ba59d10f56618fbea901f8ee7743d7072df5c32f1f4180dce04ee7bcfe45dc3",
+      "evidence_links": [
+        "ev_80a2203d78098e25ca39c51f537ef62df8e68d11d328bce5171df878f2608273"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Nie wyznacza samodzielnie gotowości sportowej."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C09"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Nie wyznacza samodzielnie gotowości sportowej.",
+        "id": "C09",
+        "kind": "opis_autora",
+        "source_ids": ["S09"],
+        "text": "Podpór czworaczy jest analizowany przez jego wymagania dla segmentów i podparcia."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C09", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_5c624188761f75a9531cda7f2b19c3587d2d15adcd1baf0aa6aa32e6c321388e",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Nie odczytano pełnego abstraktu; odnośnik bibliograficzny, bez oceny szczegółowych wyników."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://pubmed.ncbi.nlm.nih.gov/9292460/"
+        }
+      ],
+      "normalized_result": {
+        "author": "Hodges PW, Gandevia SC, Richardson CA",
+        "id": "S14",
+        "kind": "primary_research",
+        "limitation": "Nie odczytano pełnego abstraktu; odnośnik bibliograficzny, bez oceny szczegółowych wyników.",
+        "locator": "PMID 9292460; DOI 10.1152/jappl.1997.83.3.753",
+        "published_on": "1997-09",
+        "read_level": "indexed_title_and_metadata",
+        "title": "Contractions of specific abdominal muscles in postural tasks are affected by respiratory maneuvers",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9292460/"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S14",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9292460/"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_5dfdd6a73e282e1c4a17153a9d69eaa127016f7ee36b8037f35e5ba1c8734cd3",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Wypowiedzi autora, bez niezależnego pomiaru deklarowanych efektów."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://evolvingperformance.buzzsprout.com/2376055/episodes/18549428-structural-biases-in-speed-strength-development-with-bill-hartman"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman, Kevin Neeld",
+        "id": "S05",
+        "kind": "primary_interview",
+        "limitation": "Wypowiedzi autora, bez niezależnego pomiaru deklarowanych efektów.",
+        "locator": "33:42–35:33; 55:47–1:01:50",
+        "published_on": "2026-01-30",
+        "read_level": "transcript_sections",
+        "title": "Structural Biases in Speed & Strength Development",
+        "url": "https://evolvingperformance.buzzsprout.com/2376055/episodes/18549428-structural-biases-in-speed-strength-development-with-bill-hartman"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S05",
+        "url": "https://evolvingperformance.buzzsprout.com/2376055/episodes/18549428-structural-biases-in-speed-strength-development-with-bill-hartman"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_5e0adddb96fff1e6a6378acd31d6a2c5d11ec6bd3b15243aaed6bffd3b918baa",
+      "evidence_links": [
+        "ev_dfe50db57bba528f25636b01a70b2eb22dacb371646851d059d5217320f0de5a",
+        "ev_edc765641acb091192dddaf0049bda305a8cd72592805a70af6bb368801276b0"
+      ],
+      "limitations": [
+        "Artifact identity is unavailable for this observation.",
+        "An open review question; no resolution or clinical verification is claimed."
+      ],
+      "locations": [],
+      "normalized_result": {
+        "needed": "Obejrzeć pełne fragmenty demonstracji; napisy są dostępne, ale obraz nie załadował się w sesji. Nie wnioskować o widocznym ruchu wyłącznie z tekstu.",
+        "question": "Co dokładnie przedstawiają demonstracje ruchu miednicy w obu filmach?"
+      },
+      "operation": "record-unknown",
+      "parameters": { "local_id": "U07" },
+      "predicate_type": "rea.residual-unknown-mutation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": null
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_633101b3b63d3b86761ba1c76a30be00eeea7e534e572e23311a6307968287ac",
+      "evidence_links": [
+        "ev_be6dc64c672b9345e83ee986a0c3843d0bc8bd270d10b4317e983fff55d85124",
+        "ev_dfe50db57bba528f25636b01a70b2eb22dacb371646851d059d5217320f0de5a"
+      ],
+      "limitations": [
+        "Manual interpretation of automatic captions; not an automatic clinical inference.",
+        "Visual review status: not_required",
+        "Author's statement; not independent clinical validation."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://www.youtube.com/watch?v=PQZRlndm4cw&t=32s"
+        }
+      ],
+      "normalized_result": {
+        "clinical_validation": "not_performed",
+        "confidence": "analyst-inference",
+        "cue_ids": [
+          "cue-0008",
+          "cue-0009",
+          "cue-0010",
+          "cue-0011",
+          "cue-0012",
+          "cue-0013",
+          "cue-0014",
+          "cue-0015",
+          "cue-0016",
+          "cue-0017",
+          "cue-0018"
+        ],
+        "end": 87,
+        "id": "G1",
+        "kind": "author_claim",
+        "source_url": "https://www.youtube.com/watch?v=PQZRlndm4cw&t=32s",
+        "start": 32,
+        "summary_pl": "Hartman rozdziela przenoszenie nogi przed kontaktem z podłożem od pracy podporowej po kontakcie.",
+        "visual_review": "not_required"
+      },
+      "operation": "record-timestamped-interpretation",
+      "parameters": { "finding_id": "G1", "video_id": "PQZRlndm4cw" },
+      "predicate_type": "hartman-pl.video-interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "2b38de00c51a9ae4c1fdfc942f6a2c2c06a8819cfee2a06f002d2d98ea454bff"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/analizy-filmow.json",
+        "name": "analizy-filmow.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_68391dbe608926d7b95ed5c84f8ee8d7b988941ebbb8271dc375d1349196d7b6",
+      "evidence_links": [
+        "ev_93bba194269aecf62f31dfe3695858258e9bbcea523e050261a17cdd49c9821a"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Trafność i powtarzalność klasyfikacji pozostają niewiadome w tym projekcie."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C06"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Trafność i powtarzalność klasyfikacji pozostają niewiadome w tym projekcie.",
+        "id": "C06",
+        "kind": "opis_autora",
+        "source_ids": ["S04"],
+        "text": "W interpretacji wide/narrow ważne jest zachowanie, nie sam pomiar kąta."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C06", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_797ae288cce3cace33612e2d150ac41580a0b88914e4939f7a47bbf8cce98ffa",
+      "evidence_links": [
+        "ev_93bba194269aecf62f31dfe3695858258e9bbcea523e050261a17cdd49c9821a"
+      ],
+      "limitations": [
+        "Artifact identity is unavailable for this observation.",
+        "An open review question; no resolution or clinical verification is claimed."
+      ],
+      "locations": [],
+      "normalized_result": {
+        "needed": "Odpowiednie badania pomiarowe i prognostyczne; obecne wyszukiwanie nie było systematyczne.",
+        "question": "Jaka jest powtarzalność i trafność prognostyczna pełnej klasyfikacji ISA Hartmana?"
+      },
+      "operation": "record-unknown",
+      "parameters": { "local_id": "U01" },
+      "predicate_type": "rea.residual-unknown-mutation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": null
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_79eb268f56b5c565f55469c1353f00480f7488352ac656949348d31893aa5649",
+      "evidence_links": [
+        "ev_5c624188761f75a9531cda7f2b19c3587d2d15adcd1baf0aa6aa32e6c321388e"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Odnośnik bibliograficzny; szczegółowych wyników i abstraktu nie oceniono."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C14"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Odnośnik bibliograficzny; szczegółowych wyników i abstraktu nie oceniono.",
+        "id": "C14",
+        "kind": "badanie_podstawowe",
+        "source_ids": ["S14"],
+        "text": "Tytuł publikacji wskazuje na temat wpływu manewrów oddechowych na aktywność mięśni brzucha."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C14", "kind": "badanie_podstawowe" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_7f9176b8332cfb3c9b7f4c27a223ff78a8e35ce3e6b27cfe5570c824a7f508d5",
+      "evidence_links": [
+        "ev_849b24d981acc938944d69349719788293231a228d6bf75d71c3ba74be3b1c5e",
+        "ev_d35083b28bf79b8a76959ccee912d58396cc44c772de2e6e54b50a9d9c749856",
+        "ev_80a2203d78098e25ca39c51f537ef62df8e68d11d328bce5171df878f2608273",
+        "ev_b22b80c8266a626df5a411728a0b0f1ac56eb7aff0aa3e0b71da25f73591da19",
+        "ev_2e5ac5dd44561453d56e179be22f6b974c8527dd2495e85c1c4da4176abe8163"
+      ],
+      "limitations": [
+        "Artifact identity is unavailable for this observation.",
+        "An open review question; no resolution or clinical verification is claimed."
+      ],
+      "locations": [],
+      "normalized_result": {
+        "needed": "Pełne publiczne demonstracje lub dostęp do materiałów przekazanych przez użytkownika.",
+        "question": "Jakie dokładne parametry wykonania i kryteria wyboru stosuje autor w każdej pozycji?"
+      },
+      "operation": "record-unknown",
+      "parameters": { "local_id": "U03" },
+      "predicate_type": "rea.residual-unknown-mutation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": null
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_80a2203d78098e25ca39c51f537ef62df8e68d11d328bce5171df878f2608273",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Związki z wynikiem sportowym są deklaracjami autora."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://podcasts.apple.com/us/podcast/youre-using-quadruped-wrong/id1662268221?i=1000760076535"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman, Chris Wicus",
+        "id": "S09",
+        "kind": "author_podcast",
+        "limitation": "Związki z wynikiem sportowym są deklaracjami autora.",
+        "locator": "03:08; 08:03; 11:22; 16:42",
+        "published_on": "2026-04-07",
+        "read_level": "episode_description_and_chapters",
+        "title": "You're Using Quadruped Wrong",
+        "url": "https://podcasts.apple.com/us/podcast/youre-using-quadruped-wrong/id1662268221?i=1000760076535"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S09",
+        "url": "https://podcasts.apple.com/us/podcast/youre-using-quadruped-wrong/id1662268221?i=1000760076535"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_849b24d981acc938944d69349719788293231a228d6bf75d71c3ba74be3b1c5e",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Bez pełnego obejrzenia demonstracji."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://podcasts.apple.com/us/podcast/youre-using-side-lying-wrong/id1662268221?i=1000762908804"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman, Chris Wicus",
+        "id": "S07",
+        "kind": "author_podcast",
+        "limitation": "Bez pełnego obejrzenia demonstracji.",
+        "locator": "07:25; 09:10; 21:12",
+        "published_on": "2026-04-21",
+        "read_level": "episode_description_and_chapters",
+        "title": "You're Using Side Lying Wrong — Episode 87",
+        "url": "https://podcasts.apple.com/us/podcast/youre-using-side-lying-wrong/id1662268221?i=1000762908804"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S07",
+        "url": "https://podcasts.apple.com/us/podcast/youre-using-side-lying-wrong/id1662268221?i=1000762908804"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_89e9c0fd77121078a59aa0c06909967b06d5fb75e0b0c9f61f358f2304c9efc8",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Nie zmierzono deformacji miednicy."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://billhartmanpt.com/tag/posterior-pelvic-tilt/"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman",
+        "id": "S03",
+        "kind": "author_website",
+        "limitation": "Nie zmierzono deformacji miednicy.",
+        "locator": "Wpis 06.04.2020; kontekst oceny również 08.05.2020",
+        "published_on": "2020-04-06",
+        "read_level": "archive_entry_text",
+        "title": "Sacral movement versus pelvic orientation",
+        "url": "https://billhartmanpt.com/tag/posterior-pelvic-tilt/"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S03",
+        "url": "https://billhartmanpt.com/tag/posterior-pelvic-tilt/"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_92f0953785361886577d685b932ec6fda1804a70c8485a8979b6ddd16255cdc2",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Opis zastosowania, bez badania porównawczego."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://billhartmanpt.com/tag/pump-handle-sternum/page/2/"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman",
+        "id": "S06",
+        "kind": "author_website",
+        "limitation": "Opis zastosowania, bez badania porównawczego.",
+        "locator": "Too Simple Solution: Breathing to expand the rib cage",
+        "published_on": null,
+        "read_level": "archive_entry_text",
+        "title": "Breathing, rib cage and shoulder range",
+        "url": "https://billhartmanpt.com/tag/pump-handle-sternum/page/2/"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S06",
+        "url": "https://billhartmanpt.com/tag/pump-handle-sternum/page/2/"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_93bba194269aecf62f31dfe3695858258e9bbcea523e050261a17cdd49c9821a",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Opis odcinka nie waliduje klasyfikacji."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://podcasts.apple.com/us/podcast/reconsider-are-you-wide-or-narrow-with-bill-hartman/id1662268221?i=1000677229423"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman, Reconsider",
+        "id": "S04",
+        "kind": "author_podcast",
+        "limitation": "Opis odcinka nie waliduje klasyfikacji.",
+        "locator": "Takeaways; rozdziały 00:00–06:48, 20:47–28:53",
+        "published_on": "2024-11-17",
+        "read_level": "episode_description_and_chapters",
+        "title": "Are You Wide or Narrow? — Episode 50",
+        "url": "https://podcasts.apple.com/us/podcast/reconsider-are-you-wide-or-narrow-with-bill-hartman/id1662268221?i=1000677229423"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S04",
+        "url": "https://podcasts.apple.com/us/podcast/reconsider-are-you-wide-or-narrow-with-bill-hartman/id1662268221?i=1000677229423"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_95cd8f95abb9aa1ecbea30f9b4d0ea3b386b041f2a7d5aabb80ec710ff0ead0b",
+      "evidence_links": [
+        "ev_be6dc64c672b9345e83ee986a0c3843d0bc8bd270d10b4317e983fff55d85124",
+        "ev_dfe50db57bba528f25636b01a70b2eb22dacb371646851d059d5217320f0de5a"
+      ],
+      "limitations": [
+        "Manual interpretation of automatic captions; not an automatic clinical inference.",
+        "Visual review status: not_required",
+        "Author's statement; not independent clinical validation."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://www.youtube.com/watch?v=PQZRlndm4cw&t=222s"
+        }
+      ],
+      "normalized_result": {
+        "clinical_validation": "not_performed",
+        "confidence": "analyst-inference",
+        "cue_ids": [
+          "cue-0045",
+          "cue-0046",
+          "cue-0047",
+          "cue-0048",
+          "cue-0049",
+          "cue-0050"
+        ],
+        "end": 250,
+        "id": "G3",
+        "kind": "author_claim",
+        "source_url": "https://www.youtube.com/watch?v=PQZRlndm4cw&t=222s",
+        "start": 222,
+        "summary_pl": "Strategia wdechowa lub wydechowa nazywa tu ustawienia i działania mięśni; autor nie wymaga synchronizowania oddechu z krokami.",
+        "visual_review": "not_required"
+      },
+      "operation": "record-timestamped-interpretation",
+      "parameters": { "finding_id": "G3", "video_id": "PQZRlndm4cw" },
+      "predicate_type": "hartman-pl.video-interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "2b38de00c51a9ae4c1fdfc942f6a2c2c06a8819cfee2a06f002d2d98ea454bff"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/analizy-filmow.json",
+        "name": "analizy-filmow.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_98223602cc967b5a4c8fb427be183aefd01125d427438cfccc89edcb2a2b6c23",
+      "evidence_links": [
+        "ev_be6dc64c672b9345e83ee986a0c3843d0bc8bd270d10b4317e983fff55d85124",
+        "ev_dfe50db57bba528f25636b01a70b2eb22dacb371646851d059d5217320f0de5a"
+      ],
+      "limitations": [
+        "Manual interpretation of automatic captions; not an automatic clinical inference.",
+        "Visual review status: pending",
+        "Zapis wypowiedzi; demonstracja na modelu miednicy nie została oceniona."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://www.youtube.com/watch?v=PQZRlndm4cw&t=117s"
+        }
+      ],
+      "normalized_result": {
+        "clinical_validation": "not_performed",
+        "confidence": "analyst-inference",
+        "cue_ids": [
+          "cue-0025",
+          "cue-0026",
+          "cue-0027",
+          "cue-0028",
+          "cue-0029",
+          "cue-0030",
+          "cue-0031",
+          "cue-0032",
+          "cue-0033",
+          "cue-0034",
+          "cue-0035",
+          "cue-0036",
+          "cue-0037",
+          "cue-0038",
+          "cue-0039",
+          "cue-0040",
+          "cue-0041",
+          "cue-0042",
+          "cue-0043",
+          "cue-0044"
+        ],
+        "end": 222,
+        "id": "G2",
+        "kind": "author_claim",
+        "limitation": "Zapis wypowiedzi; demonstracja na modelu miednicy nie została oceniona.",
+        "source_url": "https://www.youtube.com/watch?v=PQZRlndm4cw&t=117s",
+        "start": 117,
+        "summary_pl": "Opisuje lewą stronę w podporze jako ER → IR → ER. Jedna strona opóźnia swój ruch, gdy druga przesuwa się do przodu.",
+        "visual_review": "pending"
+      },
+      "operation": "record-timestamped-interpretation",
+      "parameters": { "finding_id": "G2", "video_id": "PQZRlndm4cw" },
+      "predicate_type": "hartman-pl.video-interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "2b38de00c51a9ae4c1fdfc942f6a2c2c06a8819cfee2a06f002d2d98ea454bff"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/analizy-filmow.json",
+        "name": "analizy-filmow.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_9f73e3921896cff3e77c302a37e4938e32f8856e4c2999f94cffd8572117db01",
+      "evidence_links": [
+        "ev_edc765641acb091192dddaf0049bda305a8cd72592805a70af6bb368801276b0"
+      ],
+      "limitations": [
+        "Metadata captured from the actual local caption import and annotation workflow.",
+        "The private full caption artifact is identified by digest but is not included in this public bundle.",
+        "Automatic caption accuracy and clinical mechanisms have not been independently validated."
+      ],
+      "locations": [],
+      "normalized_result": {
+        "acquisition": "Browser YouTube transcript export, then youtube.mjs import/pack/annotate",
+        "caption_kind": "auto-generated",
+        "coverage": "Full English automatic captions; video image not reviewed",
+        "cue_count": 81,
+        "transcript_sha256": "de1136809c013670eaa223eda573027515fead699fcaf03f30aa46110f9b425c",
+        "video_id": "N0GDdA0MPCo"
+      },
+      "operation": "record-caption-analysis-provenance",
+      "parameters": { "video_id": "N0GDdA0MPCo" },
+      "predicate_type": "hartman-pl.caption-provenance",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "2b38de00c51a9ae4c1fdfc942f6a2c2c06a8819cfee2a06f002d2d98ea454bff"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/analizy-filmow.json",
+        "name": "analizy-filmow.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_a480110dfb9c40370e9718af797d1331373a5048b0164fa51d1a02826486fce0",
+      "evidence_links": [
+        "ev_d35083b28bf79b8a76959ccee912d58396cc44c772de2e6e54b50a9d9c749856"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Opis autora, nie uniwersalna reguła dla pacjentów."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C08"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Opis autora, nie uniwersalna reguła dla pacjentów.",
+        "id": "C08",
+        "kind": "opis_autora",
+        "source_ids": ["S08"],
+        "text": "Hook lying nie jest według autora automatycznie neutralnym punktem wyjścia."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C08", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_a4fae9688e86efee72ebd0cc6c896518401198313d63347a6bab8f98b678293a",
+      "evidence_links": [
+        "ev_849b24d981acc938944d69349719788293231a228d6bf75d71c3ba74be3b1c5e"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Opis pozycji; bez odtworzenia pełnej demonstracji."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C07"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Opis pozycji; bez odtworzenia pełnej demonstracji.",
+        "id": "C07",
+        "kind": "opis_autora",
+        "source_ids": ["S07"],
+        "text": "Leżenie bokiem oraz wariant ¾ mają konkretne wymagania i cele."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C07", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_ac35776ad7ff916d55735e5a7632d50ce788aa741b7018529062011d5c059c7b",
+      "evidence_links": [
+        "ev_89e9c0fd77121078a59aa0c06909967b06d5fb75e0b0c9f61f358f2304c9efc8"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Wielkości ruchu wewnętrznego nie zmierzono."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C03"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Wielkości ruchu wewnętrznego nie zmierzono.",
+        "id": "C03",
+        "kind": "opis_autora",
+        "source_ids": ["S03"],
+        "text": "Orientacja całej miednicy i ruch wewnątrz jej układu są odmiennymi kategoriami."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C03", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_b22b80c8266a626df5a411728a0b0f1ac56eb7aff0aa3e0b71da25f73591da19",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Wymagania pozycji nie są tu zwalidowanymi kryteriami leczenia."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://podcasts.apple.com/us/podcast/reconsider-youre-using-half-kneeling-wrong-with-bill/id1662268221?i=1000757091530"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman, Chris Wicus",
+        "id": "S10",
+        "kind": "author_podcast",
+        "limitation": "Wymagania pozycji nie są tu zwalidowanymi kryteriami leczenia.",
+        "locator": "00:00; 04:30; 08:30; 12:30",
+        "published_on": "2026-03-24",
+        "read_level": "episode_description_and_chapters",
+        "title": "You're Using Half Kneeling Wrong",
+        "url": "https://podcasts.apple.com/us/podcast/reconsider-youre-using-half-kneeling-wrong-with-bill/id1662268221?i=1000757091530"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S10",
+        "url": "https://podcasts.apple.com/us/podcast/reconsider-youre-using-half-kneeling-wrong-with-bill/id1662268221?i=1000757091530"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_b35b26557731e484c94af5ed75eb6c1236b10d0f28eeadf0369d474a1ce78ff5",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Odczyt opisu wpisu, bez pełnego nagrania."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://billhartmanpt.com/tag/exercises-for-hip-pain/page/2/"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman",
+        "id": "S02",
+        "kind": "author_website",
+        "limitation": "Odczyt opisu wpisu, bez pełnego nagrania.",
+        "locator": "Padawan Lesson, wpis 15.03.2020",
+        "published_on": "2020-03-15",
+        "read_level": "archive_entry_text",
+        "title": "Hip and pelvis: relative motion and orientation",
+        "url": "https://billhartmanpt.com/tag/exercises-for-hip-pain/page/2/"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S02",
+        "url": "https://billhartmanpt.com/tag/exercises-for-hip-pain/page/2/"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_b94b6fb184adba7a32034fecbdbc4c1126e3073deb2b1d0dd482a7dc30bab938",
+      "evidence_links": [],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Propozycja organizacji rozumowania; nie protokół autora."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C15"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Propozycja organizacji rozumowania; nie protokół autora.",
+        "id": "C15",
+        "kind": "interpretacja_dydaktyczna",
+        "source_ids": [],
+        "text": "Zmianę warunków można wykorzystać do sprawdzenia jednej hipotezy w powtarzalnym zadaniu."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": {
+        "finding_id": "C15",
+        "kind": "interpretacja_dydaktyczna"
+      },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_bca5d6243e3107c96a26aa483c844f91b70d171d4851fdd25117b335c8b605b9",
+      "evidence_links": [
+        "ev_b22b80c8266a626df5a411728a0b0f1ac56eb7aff0aa3e0b71da25f73591da19"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Nie ustalono uniwersalnych kryteriów dostępu do tej pozycji."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C10"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Nie ustalono uniwersalnych kryteriów dostępu do tej pozycji.",
+        "id": "C10",
+        "kind": "opis_autora",
+        "source_ids": ["S10"],
+        "text": "Klęk jednonóż nie jest traktowany przez autora tylko jako szczebel progresji."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C10", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_bd2aa7c5f836930c4b48f2200fdf1f4a3e4125489bb5e557c7cf70b0f6851d09",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Szybki ruch ramienia; nie badanie UHPC ani leczenia bólu."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://pubmed.ncbi.nlm.nih.gov/9423192/"
+        }
+      ],
+      "normalized_result": {
+        "author": "Hodges PW, Butler JE, McKenzie DK, Gandevia SC",
+        "id": "S13",
+        "kind": "primary_research",
+        "limitation": "Szybki ruch ramienia; nie badanie UHPC ani leczenia bólu.",
+        "locator": "PMID 9423192; DOI 10.1111/j.1469-7793.1997.539bb.x",
+        "published_on": "1997-12-01",
+        "read_level": "abstract",
+        "title": "Contraction of the human diaphragm during rapid postural adjustments",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9423192/"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S13",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9423192/"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_be6dc64c672b9345e83ee986a0c3843d0bc8bd270d10b4317e983fff55d85124",
+      "evidence_links": [
+        "ev_dfe50db57bba528f25636b01a70b2eb22dacb371646851d059d5217320f0de5a"
+      ],
+      "limitations": [
+        "Metadata captured from the actual local caption import and annotation workflow.",
+        "The private full caption artifact is identified by digest but is not included in this public bundle.",
+        "Automatic caption accuracy and clinical mechanisms have not been independently validated."
+      ],
+      "locations": [],
+      "normalized_result": {
+        "acquisition": "Browser YouTube transcript export, then youtube.mjs import/pack/annotate",
+        "caption_kind": "auto-generated",
+        "coverage": "Full English automatic captions; video image not reviewed",
+        "cue_count": 82,
+        "transcript_sha256": "55d84e7c80380a7c0de5bc9abd6e6efbe524e6e10f66ac63a9751f2d13f47e87",
+        "video_id": "PQZRlndm4cw"
+      },
+      "operation": "record-caption-analysis-provenance",
+      "parameters": { "video_id": "PQZRlndm4cw" },
+      "predicate_type": "hartman-pl.caption-provenance",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "2b38de00c51a9ae4c1fdfc942f6a2c2c06a8819cfee2a06f002d2d98ea454bff"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/analizy-filmow.json",
+        "name": "analizy-filmow.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_d35083b28bf79b8a76959ccee912d58396cc44c772de2e6e54b50a9d9c749856",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Nie odtwarza szczegółowej instrukcji ćwiczenia."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://podcasts.apple.com/us/podcast/youre-using-hook-lying-wrong/id1662268221?i=1000766259818"
+        }
+      ],
+      "normalized_result": {
+        "author": "Bill Hartman, Chris Wicus",
+        "id": "S08",
+        "kind": "author_podcast",
+        "limitation": "Nie odtwarza szczegółowej instrukcji ćwiczenia.",
+        "locator": "03:25; 05:37; 16:06; 19:02",
+        "published_on": "2026-05-05",
+        "read_level": "episode_description_and_chapters",
+        "title": "You're Using Hook Lying Wrong — Episode 88",
+        "url": "https://podcasts.apple.com/us/podcast/youre-using-hook-lying-wrong/id1662268221?i=1000766259818"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S08",
+        "url": "https://podcasts.apple.com/us/podcast/youre-using-hook-lying-wrong/id1662268221?i=1000766259818"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_dfe50db57bba528f25636b01a70b2eb22dacb371646851d059d5217320f0de5a",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Automatic captions may contain recognition errors. No visual motion assessment or clinical validation was performed. Publication date comes from the author's matching blog entry."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://www.youtube.com/watch?v=PQZRlndm4cw"
+        }
+      ],
+      "normalized_result": {
+        "accessed_on": "2026-10-08",
+        "caption_cues": 82,
+        "id": "S15",
+        "kind": "author_video",
+        "limitation": "Automatic captions may contain recognition errors. No visual motion assessment or clinical validation was performed. Publication date comes from the author's matching blog entry.",
+        "locator": "Timestamped findings in analizy-filmow.json",
+        "published_on": "2020-02-17",
+        "read_level": "full_english_automatic_captions; image_unavailable",
+        "title": "Q & A for The 16% - Early, Mid, and Late Propulsion of the Gait Cycle",
+        "transcript_sha256": "55d84e7c80380a7c0de5bc9abd6e6efbe524e6e10f66ac63a9751f2d13f47e87",
+        "url": "https://www.youtube.com/watch?v=PQZRlndm4cw"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S15",
+        "url": "https://www.youtube.com/watch?v=PQZRlndm4cw"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_ec32b01bc0bc72f60cc382f6af1387abd07b9395dcb65fdf0723da35d86cbe5f",
+      "evidence_links": [
+        "ev_025d6f61cb0a38234a04bbc222bb8b5b00b7010a38d26523e3e18fdfc252f5cb",
+        "ev_bd2aa7c5f836930c4b48f2200fdf1f4a3e4125489bb5e557c7cf70b0f6851d09",
+        "ev_5c624188761f75a9531cda7f2b19c3587d2d15adcd1baf0aa6aa32e6c321388e"
+      ],
+      "limitations": [
+        "Artifact identity is unavailable for this observation.",
+        "An open review question; no resolution or clinical verification is claimed."
+      ],
+      "locations": [],
+      "normalized_result": {
+        "needed": "Badania porównawcze odnoszące się do konkretnych populacji i wyników.",
+        "question": "Czy dobór interwencji według UHPC poprawia istotne wyniki bardziej niż odpowiednie alternatywy?"
+      },
+      "operation": "record-unknown",
+      "parameters": { "local_id": "U02" },
+      "predicate_type": "rea.residual-unknown-mutation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": null
+    },
+    {
+      "authority": "historical-reference",
+      "confidence": "observed",
+      "environment": null,
+      "evidence_id": "ev_edc765641acb091192dddaf0049bda305a8cd72592805a70af6bb368801276b0",
+      "evidence_links": [],
+      "limitations": [
+        "Manually recorded metadata after source reading; REA did not fetch this URL.",
+        "Observation concerns the source metadata and reading scope, not a measured clinical mechanism.",
+        "Automatic captions may contain recognition errors. No visual motion assessment or clinical validation was performed. Publication date comes from the author's matching blog entry."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "https://www.youtube.com/watch?v=N0GDdA0MPCo"
+        }
+      ],
+      "normalized_result": {
+        "accessed_on": "2026-10-08",
+        "caption_cues": 81,
+        "id": "S16",
+        "kind": "author_video",
+        "limitation": "Automatic captions may contain recognition errors. No visual motion assessment or clinical validation was performed. Publication date comes from the author's matching blog entry.",
+        "locator": "Timestamped findings in analizy-filmow.json",
+        "published_on": "2020-04-06",
+        "read_level": "full_english_automatic_captions; image_unavailable",
+        "title": "Q & A for The 16% - Determining Sacral movement vs. Pelvic Orientation (aka pelvic tilt)",
+        "transcript_sha256": "de1136809c013670eaa223eda573027515fead699fcaf03f30aa46110f9b425c",
+        "url": "https://www.youtube.com/watch?v=N0GDdA0MPCo"
+      },
+      "operation": "annotate-public-source",
+      "parameters": {
+        "source_id": "S16",
+        "url": "https://www.youtube.com/watch?v=N0GDdA0MPCo"
+      },
+      "predicate_type": "hartman-pl.source-metadata",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "011bbf3892f177b53731da0c02682bff486a84617eb3a3c37b7810cc1100dc7f"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/zrodla.json",
+        "name": "zrodla.json"
+      }
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_f0b78824d00733650c523897b268e2b3093ea38e5e9986add6992217ebc7fe7d",
+      "evidence_links": [
+        "ev_89e9c0fd77121078a59aa0c06909967b06d5fb75e0b0c9f61f358f2304c9efc8",
+        "ev_5dfdd6a73e282e1c4a17153a9d69eaa127016f7ee36b8037f35e5ba1c8734cd3"
+      ],
+      "limitations": [
+        "Artifact identity is unavailable for this observation.",
+        "An open review question; no resolution or clinical verification is claimed."
+      ],
+      "locations": [],
+      "normalized_result": {
+        "needed": "Bezpośrednie pomiary odpowiednich wielkości; obserwacja ruchu ich nie zastępuje.",
+        "question": "Jak duże zmiany geometrii miednicy i ciśnień występują w postulowanych strategiach?"
+      },
+      "operation": "record-unknown",
+      "parameters": { "local_id": "U04" },
+      "predicate_type": "rea.residual-unknown-mutation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": null
+    },
+    {
+      "authority": "analyst-inference",
+      "confidence": "inferred",
+      "environment": null,
+      "evidence_id": "ev_fb1930331ba427543934a6574071577341271ff9f8510674474e8ce089b8ddc6",
+      "evidence_links": [
+        "ev_0d4430efc869b8646b57ac59216f1df030034b68f7fda2cf128d4439a7c9638c"
+      ],
+      "limitations": [
+        "This record is a paraphrase or educational interpretation, not independent clinical validation.",
+        "Granice i pełne zależności między fazami nie zostały odtworzone."
+      ],
+      "locations": [
+        {
+          "kind": "artifact-path",
+          "path": "examples/hartman-pl/wnioski.json#C12"
+        }
+      ],
+      "normalized_result": {
+        "clinical_status": "Granice i pełne zależności między fazami nie zostały odtworzone.",
+        "id": "C12",
+        "kind": "opis_autora",
+        "source_ids": ["S12"],
+        "text": "Autor dzieli interpretację lokomocji na early, mid i late propulsion."
+      },
+      "operation": "record-source-interpretation",
+      "parameters": { "finding_id": "C12", "kind": "opis_autora" },
+      "predicate_type": "hartman-pl.interpretation",
+      "provider": {
+        "id": "hartman-pl-curation",
+        "name": "Manual annotations of public sources; not a clinical measurement provider",
+        "version": "1.0"
+      },
+      "raw_result": null,
+      "subject": {
+        "architecture": null,
+        "digest": {
+          "sha256": "686d05fe3fb54573e2db990beedf1d852526c935a883f05be76c8d85506bc7f1"
+        },
+        "format": "file",
+        "local_path": "examples/hartman-pl/wnioski.json",
+        "name": "wnioski.json"
+      }
+    }
+  ],
+  "scenarios": [],
+  "unknowns": [
+    {
+      "contradicting_evidence_ids": [],
+      "domain": "Public-source reconstruction of UHPC",
+      "mutation_evidence_ids": [
+        "ev_23055e99eb77df48b6a7f4943542932d462c93c430cab25d40fa8df9da8a332c"
+      ],
+      "previous_revision_digest": null,
+      "question": "Jak precyzyjnie fazy propulsion UHPC odnoszą się do standardowej analizy chodu?",
+      "recommended_probes": [
+        {
+          "operation": "manual-source-review",
+          "rationale": "Pełna definicja autora i bezpośrednie porównanie terminów oraz pomiarów."
+        }
+      ],
+      "relationships": [],
+      "required_authority": "external-service",
+      "required_confidence": "observed",
+      "required_environment": null,
+      "resolution": null,
+      "revision": 1,
+      "revision_digest": "8ae5871f3dc7f8f591e3b05593a33ac9e916f58f994d1aeb9b4f9f85a619d914",
+      "scope_digest": null,
+      "severity": "low",
+      "status": "open",
+      "supporting_evidence_ids": [
+        "ev_0d4430efc869b8646b57ac59216f1df030034b68f7fda2cf128d4439a7c9638c"
+      ],
+      "unknown_id": "unk_2904819de65587a38339fb108c3d1cb03206ae1543b149148a047fda4f7217b2"
+    },
+    {
+      "contradicting_evidence_ids": [],
+      "domain": "Public-source reconstruction of UHPC",
+      "mutation_evidence_ids": [
+        "ev_3ca07b0ff5f9d7be26a4edf65541d34d7372063e6a9e79801b2dc3e1c98adbcf"
+      ],
+      "previous_revision_digest": null,
+      "question": "Jaki mechanizm odpowiada za zmianę w konkretnym reteście i jak długo utrzymuje się efekt?",
+      "recommended_probes": [
+        {
+          "operation": "manual-source-review",
+          "rationale": "Pomiary powtarzane i projekt pozwalający rozróżnić konkurencyjne wyjaśnienia."
+        }
+      ],
+      "relationships": [],
+      "required_authority": "external-service",
+      "required_confidence": "observed",
+      "required_environment": null,
+      "resolution": null,
+      "revision": 1,
+      "revision_digest": "77f1cfc524d007a0ffd1b10cfd5d8620aab554de4b1625f88059464afa34509f",
+      "scope_digest": null,
+      "severity": "medium",
+      "status": "open",
+      "supporting_evidence_ids": [
+        "ev_5dfdd6a73e282e1c4a17153a9d69eaa127016f7ee36b8037f35e5ba1c8734cd3"
+      ],
+      "unknown_id": "unk_4d6e6926e369c650244d3232e6a4634bd9333251adcc390375f55dd0cdaeaf12"
+    },
+    {
+      "contradicting_evidence_ids": [],
+      "domain": "Public-source reconstruction of UHPC",
+      "mutation_evidence_ids": [
+        "ev_ec32b01bc0bc72f60cc382f6af1387abd07b9395dcb65fdf0723da35d86cbe5f"
+      ],
+      "previous_revision_digest": null,
+      "question": "Czy dobór interwencji według UHPC poprawia istotne wyniki bardziej niż odpowiednie alternatywy?",
+      "recommended_probes": [
+        {
+          "operation": "manual-source-review",
+          "rationale": "Badania porównawcze odnoszące się do konkretnych populacji i wyników."
+        }
+      ],
+      "relationships": [],
+      "required_authority": "external-service",
+      "required_confidence": "observed",
+      "required_environment": null,
+      "resolution": null,
+      "revision": 1,
+      "revision_digest": "9ae393f66a4924f00faceffb602d87e19783b55386f49de130e7e687f4e62643",
+      "scope_digest": null,
+      "severity": "medium",
+      "status": "open",
+      "supporting_evidence_ids": [
+        "ev_025d6f61cb0a38234a04bbc222bb8b5b00b7010a38d26523e3e18fdfc252f5cb",
+        "ev_5c624188761f75a9531cda7f2b19c3587d2d15adcd1baf0aa6aa32e6c321388e",
+        "ev_bd2aa7c5f836930c4b48f2200fdf1f4a3e4125489bb5e557c7cf70b0f6851d09"
+      ],
+      "unknown_id": "unk_53e7e69e86c2a9e922a51c73c6ceadbbf95878b318ecd6cdd352a30a41734bf1"
+    },
+    {
+      "contradicting_evidence_ids": [],
+      "domain": "Public-source reconstruction of UHPC",
+      "mutation_evidence_ids": [
+        "ev_5e0adddb96fff1e6a6378acd31d6a2c5d11ec6bd3b15243aaed6bffd3b918baa"
+      ],
+      "previous_revision_digest": null,
+      "question": "Co dokładnie przedstawiają demonstracje ruchu miednicy w obu filmach?",
+      "recommended_probes": [
+        {
+          "operation": "manual-source-review",
+          "rationale": "Obejrzeć pełne fragmenty demonstracji; napisy są dostępne, ale obraz nie załadował się w sesji. Nie wnioskować o widocznym ruchu wyłącznie z tekstu."
+        }
+      ],
+      "relationships": [],
+      "required_authority": "external-service",
+      "required_confidence": "observed",
+      "required_environment": null,
+      "resolution": null,
+      "revision": 1,
+      "revision_digest": "77c1f808e8d1798f0b89bf914bb1b86fcd8b2c51ae024d799f1c184cf2b7172d",
+      "scope_digest": null,
+      "severity": "medium",
+      "status": "open",
+      "supporting_evidence_ids": [
+        "ev_dfe50db57bba528f25636b01a70b2eb22dacb371646851d059d5217320f0de5a",
+        "ev_edc765641acb091192dddaf0049bda305a8cd72592805a70af6bb368801276b0"
+      ],
+      "unknown_id": "unk_5a805d2cac852ac2af76e670f61e83723a79d9cd6bbcad9a05ac43ea2809b44f"
+    },
+    {
+      "contradicting_evidence_ids": [],
+      "domain": "Public-source reconstruction of UHPC",
+      "mutation_evidence_ids": [
+        "ev_f0b78824d00733650c523897b268e2b3093ea38e5e9986add6992217ebc7fe7d"
+      ],
+      "previous_revision_digest": null,
+      "question": "Jak duże zmiany geometrii miednicy i ciśnień występują w postulowanych strategiach?",
+      "recommended_probes": [
+        {
+          "operation": "manual-source-review",
+          "rationale": "Bezpośrednie pomiary odpowiednich wielkości; obserwacja ruchu ich nie zastępuje."
+        }
+      ],
+      "relationships": [],
+      "required_authority": "external-service",
+      "required_confidence": "observed",
+      "required_environment": null,
+      "resolution": null,
+      "revision": 1,
+      "revision_digest": "1c84586aebbf6dce6ea01e83e87c7de3f34d32b9177d2e8e324a82af7939b595",
+      "scope_digest": null,
+      "severity": "medium",
+      "status": "open",
+      "supporting_evidence_ids": [
+        "ev_5dfdd6a73e282e1c4a17153a9d69eaa127016f7ee36b8037f35e5ba1c8734cd3",
+        "ev_89e9c0fd77121078a59aa0c06909967b06d5fb75e0b0c9f61f358f2304c9efc8"
+      ],
+      "unknown_id": "unk_6817694703df365dd345757d8949845acff3b4be337420112f039180f8287fda"
+    },
+    {
+      "contradicting_evidence_ids": [],
+      "domain": "Public-source reconstruction of UHPC",
+      "mutation_evidence_ids": [
+        "ev_7f9176b8332cfb3c9b7f4c27a223ff78a8e35ce3e6b27cfe5570c824a7f508d5"
+      ],
+      "previous_revision_digest": null,
+      "question": "Jakie dokładne parametry wykonania i kryteria wyboru stosuje autor w każdej pozycji?",
+      "recommended_probes": [
+        {
+          "operation": "manual-source-review",
+          "rationale": "Pełne publiczne demonstracje lub dostęp do materiałów przekazanych przez użytkownika."
+        }
+      ],
+      "relationships": [],
+      "required_authority": "external-service",
+      "required_confidence": "observed",
+      "required_environment": null,
+      "resolution": null,
+      "revision": 1,
+      "revision_digest": "0f13882785bbba032122fe1ca237c019b3def76f2c8f689ab08452de3cc56144",
+      "scope_digest": null,
+      "severity": "low",
+      "status": "open",
+      "supporting_evidence_ids": [
+        "ev_2e5ac5dd44561453d56e179be22f6b974c8527dd2495e85c1c4da4176abe8163",
+        "ev_80a2203d78098e25ca39c51f537ef62df8e68d11d328bce5171df878f2608273",
+        "ev_849b24d981acc938944d69349719788293231a228d6bf75d71c3ba74be3b1c5e",
+        "ev_b22b80c8266a626df5a411728a0b0f1ac56eb7aff0aa3e0b71da25f73591da19",
+        "ev_d35083b28bf79b8a76959ccee912d58396cc44c772de2e6e54b50a9d9c749856"
+      ],
+      "unknown_id": "unk_e6ddcbc9e9562b9ff6ed1dab961c0355395fb3ca58900ee790aa56225a5c2dba"
+    },
+    {
+      "contradicting_evidence_ids": [],
+      "domain": "Public-source reconstruction of UHPC",
+      "mutation_evidence_ids": [
+        "ev_797ae288cce3cace33612e2d150ac41580a0b88914e4939f7a47bbf8cce98ffa"
+      ],
+      "previous_revision_digest": null,
+      "question": "Jaka jest powtarzalność i trafność prognostyczna pełnej klasyfikacji ISA Hartmana?",
+      "recommended_probes": [
+        {
+          "operation": "manual-source-review",
+          "rationale": "Odpowiednie badania pomiarowe i prognostyczne; obecne wyszukiwanie nie było systematyczne."
+        }
+      ],
+      "relationships": [],
+      "required_authority": "external-service",
+      "required_confidence": "observed",
+      "required_environment": null,
+      "resolution": null,
+      "revision": 1,
+      "revision_digest": "7dc14092100a14536448265a15073f3ef3f5cb658e14ac3572813bc24035e28d",
+      "scope_digest": null,
+      "severity": "medium",
+      "status": "open",
+      "supporting_evidence_ids": [
+        "ev_93bba194269aecf62f31dfe3695858258e9bbcea523e050261a17cdd49c9821a"
+      ],
+      "unknown_id": "unk_f59265306a9d1d695b14e523ffa84a9ac54fb17a355f07bf85ea69460848dcbc"
+    }
+  ]
+}

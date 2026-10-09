@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "catalog": 937,
+  "indexed": 310,
+  "reviewed_sources": 26,
+  "findings": 41,
+  "rea_records": 82,
+  "rea_unknowns": 3,
+  "report_sha256": "7fce5ef21e702d992b4166149d324b558ab25866cefa3cf07f71cea5b8359b66",
+  "clinical_validation": "not_performed"
+}

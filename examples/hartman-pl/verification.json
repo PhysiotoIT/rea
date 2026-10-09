@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "sources": 16,
+  "findings": 16,
+  "videos": 2,
+  "video_findings": 6,
+  "video_cues": 163,
+  "open_unknowns": 7,
+  "evidence_records": 47,
+  "documents": 10,
+  "source_references_checked": 50,
+  "local_links_checked": 29,
+  "clinical_validation": "not_performed",
+  "scope": "Local structure, source references, evidence integrity and explicit uncertainty; not a clinical effectiveness test."
+}

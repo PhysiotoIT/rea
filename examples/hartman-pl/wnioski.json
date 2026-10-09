@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "findings": [
+    {
+      "id": "C01",
+      "kind": "opis_autora",
+      "text": "UHPC łączy strukturę, oddychanie, transfer energii i warunki zadania.",
+      "source_ids": ["S01"],
+      "clinical_status": "Stanowisko autora; skuteczność całego modelu nie została tutaj oceniona."
+    },
+    {
+      "id": "C02",
+      "kind": "opis_autora",
+      "text": "Hartman rozróżnia ruch względny biodra i orientację miednicy.",
+      "source_ids": ["S02"],
+      "clinical_status": "Opis pojęć, nie rozpoznanie przyczyny bólu."
+    },
+    {
+      "id": "C03",
+      "kind": "opis_autora",
+      "text": "Orientacja całej miednicy i ruch wewnątrz jej układu są odmiennymi kategoriami.",
+      "source_ids": ["S03"],
+      "clinical_status": "Wielkości ruchu wewnętrznego nie zmierzono."
+    },
+    {
+      "id": "C04",
+      "kind": "opis_autora",
+      "text": "Autor rozpatruje compression i expansion w kontekście celu ruchowego.",
+      "source_ids": ["S06"],
+      "clinical_status": "Brak oceny przewagi klinicznej tego wyjaśnienia."
+    },
+    {
+      "id": "C05",
+      "kind": "opis_autora",
+      "text": "Strategia oddychania zależy w jego wyjaśnieniach od wymagań zadania.",
+      "source_ids": ["S05"],
+      "clinical_status": "Deklaracja modelowa; nie niezależny pomiar jej skutków."
+    },
+    {
+      "id": "C06",
+      "kind": "opis_autora",
+      "text": "W interpretacji wide/narrow ważne jest zachowanie, nie sam pomiar kąta.",
+      "source_ids": ["S04"],
+      "clinical_status": "Trafność i powtarzalność klasyfikacji pozostają niewiadome w tym projekcie."
+    },
+    {
+      "id": "C07",
+      "kind": "opis_autora",
+      "text": "Leżenie bokiem oraz wariant ¾ mają konkretne wymagania i cele.",
+      "source_ids": ["S07"],
+      "clinical_status": "Opis pozycji; bez odtworzenia pełnej demonstracji."
+    },
+    {
+      "id": "C08",
+      "kind": "opis_autora",
+      "text": "Hook lying nie jest według autora automatycznie neutralnym punktem wyjścia.",
+      "source_ids": ["S08"],
+      "clinical_status": "Opis autora, nie uniwersalna reguła dla pacjentów."
+    },
+    {
+      "id": "C09",
+      "kind": "opis_autora",
+      "text": "Podpór czworaczy jest analizowany przez jego wymagania dla segmentów i podparcia.",
+      "source_ids": ["S09"],
+      "clinical_status": "Nie wyznacza samodzielnie gotowości sportowej."
+    },
+    {
+      "id": "C10",
+      "kind": "opis_autora",
+      "text": "Klęk jednonóż nie jest traktowany przez autora tylko jako szczebel progresji.",
+      "source_ids": ["S10"],
+      "clinical_status": "Nie ustalono uniwersalnych kryteriów dostępu do tej pozycji."
+    },
+    {
+      "id": "C11",
+      "kind": "opis_autora",
+      "text": "Siad skośny służy autorowi do sprawdzania zachowania przy innych wymaganiach podparcia.",
+      "source_ids": ["S11"],
+      "clinical_status": "Nie jest tutaj zwalidowanym testem diagnostycznym."
+    },
+    {
+      "id": "C12",
+      "kind": "opis_autora",
+      "text": "Autor dzieli interpretację lokomocji na early, mid i late propulsion.",
+      "source_ids": ["S12"],
+      "clinical_status": "Granice i pełne zależności między fazami nie zostały odtworzone."
+    },
+    {
+      "id": "C13",
+      "kind": "badanie_podstawowe",
+      "text": "W eksperymencie przepona uczestniczyła w kontroli posturalnej przy szybkim ruchu ramienia.",
+      "source_ids": ["S13"],
+      "clinical_status": "Nie testowano algorytmu UHPC ani doboru leczenia według ISA."
+    },
+    {
+      "id": "C14",
+      "kind": "badanie_podstawowe",
+      "text": "Tytuł publikacji wskazuje na temat wpływu manewrów oddechowych na aktywność mięśni brzucha.",
+      "source_ids": ["S14"],
+      "clinical_status": "Odnośnik bibliograficzny; szczegółowych wyników i abstraktu nie oceniono."
+    },
+    {
+      "id": "C15",
+      "kind": "interpretacja_dydaktyczna",
+      "text": "Zmianę warunków można wykorzystać do sprawdzenia jednej hipotezy w powtarzalnym zadaniu.",
+      "source_ids": [],
+      "clinical_status": "Propozycja organizacji rozumowania; nie protokół autora."
+    },
+    {
+      "id": "C16",
+      "kind": "interpretacja_dydaktyczna",
+      "text": "Korzystny retest nie identyfikuje samodzielnie mechanizmu przyczynowego poprawy.",
+      "source_ids": [],
+      "clinical_status": "Zasada interpretacji eksperymentu; bez diagnozowania pacjenta."
+    }
+  ]
+}
