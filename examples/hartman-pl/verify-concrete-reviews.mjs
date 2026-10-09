@@ -7,15 +7,20 @@ import { parseCaptions, validateFindings, videoIdentity } from "./youtube.mjs";
 
 const directory = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
+const followup = args[0] === "--followup";
+if (followup) args.shift();
 assert(args.length === 0 || (args.length === 2 && args[0] === "--captions"));
 const captions = args[1] ? resolve(args[1]) : null;
-const data = JSON.parse(
-  await readFile(resolve(directory, "konkretne-filmy.json"), "utf8"),
-);
-const document = await readFile(
-  resolve(directory, "konkretne-przypadki.md"),
-  "utf8",
-);
+const prefix = followup ? "M" : "K";
+const ledgerFile = followup ? "progresje-filmy.json" : "konkretne-filmy.json";
+const documentFile = followup
+  ? "progresje-i-pomiary.md"
+  : "konkretne-przypadki.md";
+const verificationFile = followup
+  ? "followup-reviews-verification.json"
+  : "concrete-reviews-verification.json";
+const data = JSON.parse(await readFile(resolve(directory, ledgerFile), "utf8"));
+const document = await readFile(resolve(directory, documentFile), "utf8");
 
 function checkAcquisition(records, summary) {
   assert.equal(
@@ -49,10 +54,12 @@ function checkAcquisition(records, summary) {
 }
 
 function documentReferences(text) {
-  const ids = new Set(text.match(/K\d{2}/gu));
-  for (const match of text.matchAll(/K(\d{2})–K(\d{2})/gu)) {
+  const ids = new Set(text.match(new RegExp(prefix + "\\d{2}", "gu")));
+  for (const match of text.matchAll(
+    new RegExp(prefix + "(\\d{2})–" + prefix + "(\\d{2})", "gu"),
+  )) {
     for (let id = Number(match[1]); id <= Number(match[2]); id += 1)
-      ids.add("K" + String(id).padStart(2, "0"));
+      ids.add(prefix + String(id).padStart(2, "0"));
   }
   return ids;
 }
@@ -60,7 +67,7 @@ function documentReferences(text) {
 function checkFinding(finding, review, ids) {
   assert(!ids.has(finding.id), "Duplicate finding " + finding.id);
   ids.add(finding.id);
-  assert.match(finding.id, /^K\d{2}$/u);
+  assert.match(finding.id, new RegExp("^" + prefix + "\\d{2}$", "u"));
   assert(finding.end > finding.start && finding.start >= 0);
   assert(
     review.read_intervals.some(
@@ -99,6 +106,25 @@ async function checkExactSource(review) {
   }
 }
 
+async function checkLongestCohort() {
+  const checkpoint = JSON.parse(
+    await readFile(resolve(directory, "korpus-dlugich-filmow.json"), "utf8"),
+  );
+  const previous = JSON.parse(
+    await readFile(resolve(directory, "dlugie-filmy.json"), "utf8"),
+  );
+  const reviews = new Map(
+    [...previous, ...data.reviews].map((review) => [review.video_id, review]),
+  );
+  for (const film of checkpoint.films) {
+    const review = reviews.get(film.video_id);
+    assert(review, "Missing review for longest cohort: " + film.video_id);
+    assert.equal(review.transcript_sha256, film.transcript_sha256);
+  }
+  assert.equal(checkpoint.films.length, 24);
+  return checkpoint.films.length;
+}
+
 checkAcquisition(data.acquisition, data.summary);
 assert.equal(data.reviews.length, data.summary.reviewed_sources);
 assert.equal(
@@ -115,6 +141,12 @@ for (const review of data.reviews) {
   if (captions) await checkExactSource(review);
 }
 assert.equal(findingIds.size, data.summary.findings);
+if (data.summary.selected_read_seconds !== undefined) {
+  const seconds = data.reviews
+    .flatMap((review) => review.read_intervals)
+    .reduce((sum, [start, end]) => sum + end - start, 0);
+  assert.equal(seconds, data.summary.selected_read_seconds);
+}
 const sourceIds = new Set(data.acquisition.map((record) => record.video_id));
 assert.equal(
   data.reviews.filter((review) => !sourceIds.has(review.video_id)).length,
@@ -127,6 +159,8 @@ for (const match of document.matchAll(/\]\(([^)]+)\)/gu)) {
     assert(
       data.reviews.some((review) => review.video_id === identity.video_id),
     );
+  } else if (match[1].startsWith("https://")) {
+    assert.equal(new URL(match[1]).protocol, "https:");
   } else {
     await readFile(resolve(directory, match[1]));
   }
@@ -142,10 +176,16 @@ const result = {
   acquisition_count: data.acquisition.length,
   source_semantics:
     "Analyst reading; timing/hash checks do not establish clinical validity or visual accuracy.",
+  ...(followup
+    ? {
+        longest_cohort_sources_with_selected_reviews:
+          await checkLongestCohort(),
+      }
+    : {}),
 };
 if (captions)
   await writeFile(
-    resolve(directory, "concrete-reviews-verification.json"),
+    resolve(directory, verificationFile),
     JSON.stringify(result, null, 2) + "\n",
   );
 console.log(JSON.stringify(result));

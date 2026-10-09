@@ -4,7 +4,23 @@ import { join } from "node:path";
 import { videoIdentity } from "./youtube-identity.mjs";
 
 const blockPattern =
-  /confirm you.re not a bot|verify you are human|unusual traffic|automated queries|nie jeste[śs] botem|nietypow\w* ruch/iu;
+  /confirm you.re not a bot|verify you are human|unusual traffic|automated queries|nie jeste[śs] botem|nie jestem robotem|nietypow\w*\s+ruch/iu;
+
+async function hasRetainedCopy(id, job) {
+  const record = job.records.find(
+    (row) => row.video_id === id && row.status === "captions_obtained",
+  );
+  if (!record) return false;
+  try {
+    const body = await readFile(join(job.directory, id + ".txt"), "utf8");
+    if (!body.includes("Video ID: " + id))
+      throw new Error("Retained caption identity mismatch: " + id);
+    return true;
+  } catch (error) {
+    if (error.code === "ENOENT") return false;
+    throw error;
+  }
+}
 
 async function exportOne(tab, job) {
   const id = videoIdentity(await tab.url()).video_id;
@@ -15,12 +31,7 @@ async function exportOne(tab, job) {
     videoIdentity(entry.url).video_id !== id
   )
     throw new Error("Current video is outside the validated inventory: " + id);
-  if (
-    job.records.some(
-      (row) => row.video_id === id && row.status === "captions_obtained",
-    )
-  )
-    return null;
+  if (await hasRetainedCopy(id, job)) return null;
   try {
     const path = await tab.content.exportYouTubeTranscript();
     const body = await readFile(path, "utf8");
@@ -118,6 +129,17 @@ async function navigateNext(tabs, job) {
   for (const snapshot of snapshots)
     if (snapshot.status === "fulfilled" && blockPattern.test(snapshot.value))
       job.halt = true;
+  const pending = await Promise.all(tabs.map((tab) => tab.url()));
+  const identityErrors = [];
+  for (let index = 0; index < batch.length; index += 1) {
+    try {
+      if (videoIdentity(pending[index]).video_id !== batch[index].video_id)
+        throw new Error("Unexpected video.");
+    } catch {
+      job.halt = true;
+      identityErrors.push(batch[index].video_id);
+    }
+  }
   await writeFile(
     job.statePath,
     JSON.stringify(
@@ -125,13 +147,14 @@ async function navigateNext(tabs, job) {
         cursor: job.cursor,
         halt: job.halt,
         queue: job.queue,
-        pending: await Promise.all(tabs.map((tab) => tab.url())),
+        pending,
       },
       null,
       2,
     ),
   );
   return {
+    navigation_identity_errors: identityErrors,
     navigation_errors: navigations
       .filter((result) => result.status === "rejected")
       .map((result) => result.reason.message),

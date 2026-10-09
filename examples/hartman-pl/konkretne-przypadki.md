@@ -92,6 +92,8 @@ To wariant w leżeniu na plecach z ugiętymi nogami. Instrukcje dotyczą **prawe
 
 **Czego oczekuje w trakcie?** Utrzymania kontaktu prawej stopy i tylnej kieszeni podczas dodawania ruchu lewej nogi oraz prawej ręki. Gdy kontakt się zmienia, wróć do wcześniejszego ustawienia. Ten film uczy wykonania; nie przedstawia jednego pacjenta z kompletem testów przed i po. Dawka nie jest podana.
 
+**Doprecyzowanie z kolejnej analizy:** kontakt przyśrodkowy nie oznacza rezygnacji z bocznego. W osobnej rozmowie autor wymaga kontaktu pierwszej i piątej kości śródstopia oraz obu stron pięty; ostrzega przed nadmiernym dociskiem po stronie przyśrodkowej i wpadaniem kolana ku środkowi. Szczegóły i źródła **M16–M19** są w [rozłożeniu kontaktów stopy](progresje-i-pomiary.md).
+
 **Jak pomaga rękami?** W osobnym filmie pokazuje kolejność: ustawienie pięty i kontaktu pierwszej kości śródstopia → nacisk przez udo, aby nauczyć utrzymania tylnego kontaktu biodra → ponowne ustawienie stopy. Osoba ma utrzymać nacisk po zabraniu dłoni terapeuty, bez „wygrywania” mocniejszym pchaniem. Nie jest to instrukcja samodzielnej manipulacji stopy. [Demonstracja manualnego prowadzenia](https://www.youtube.com/watch?v=iKPiVq0eL9I). **K27, K28**.
 
 ## 7. Supine cross connect: stopa na ścianie

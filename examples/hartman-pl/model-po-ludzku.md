@@ -8,6 +8,8 @@ Rozwinięcie z wybranych fragmentów 15 długich nagrań znajdziesz w [decyzjach
 
 Tam znajdziesz kolejność wykonania, oczekiwania dla poszczególnych przypadków i filmy z czasami. Poniższe pojęcia pomagają zrozumieć, dlaczego autor dokonuje tych wyborów.
 
+W [dalszych konkretnych decyzjach](progresje-i-pomiary.md) znajdziesz np. wybór ręki z ciężarem w split squat, porównanie goblet squat z talerzem wysuniętym przed siebie i cofnięcie z podporu na wyprostowanej ręce do podporu na przedramieniu/biodrze. Zamiast przypisywać ćwiczenie do samej nazwy problemu, każda karta wskazuje obserwowane zachowanie, zmieniany warunek i sposób sprawdzenia odpowiedzi. Źródła: **M01–M44** w osobnym [rejestrze odczytu](progresje-filmy.json).
+
 ## 1. Najpierw zadanie i cel
 
 „Chcę czuć się swobodniej w codziennym ruchu” i „chcę rzucać jak najszybciej” to różne cele. W pierwszym przypadku Hartman mówi o poszerzaniu dostępnych możliwości ruchu. W drugim o wybieraniu kompromisu, który pozwala osiągać wynik.

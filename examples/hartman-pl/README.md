@@ -14,7 +14,9 @@ Niezależne opracowanie publicznie opisanego modelu UHPC Billa Hartmana dla fizj
 6. Przejdź przez [dwa rzeczywiście przeanalizowane filmy](filmy.md), korzystając z odnośników do konkretnych momentów.
 7. Przeczytaj [rozwinięcie na podstawie długich filmów](dlugie-filmy.md): 24 pełne teksty zindeksowane, wybrane fragmenty 15 filmów odczytane i 60 nowych wniosków.
 
-Ostatnia aktualizacja: pozyskano napisy 17 kolejnych filmów; całe dostępne teksty 9 z nich i fragmenty 5 odczytano, 3 pozostają tylko zindeksowane. Ponownie przeczytano także dwa przypadki ze wcześniejszego długiego nagrania. [Rejestr K01–K43](konkretne-filmy.json) rozdziela te zakresy i podaje brakujące instrukcje. **Nie jest to obejrzenie 17 filmów.**
+Kolejny krok: [10 dalszych kart i porównania pomiarów](progresje-i-pomiary.md). Obejmują split squat z ciężarem w przeciwnej ręce, goblet vs talerz przed sobą, zmianę podparcia bocznego, cztery kontakty stopy i przypadek po ACL z niejednakową odpowiedzią w kolejnych powtórzeniach. [Rejestr M01–M44](progresje-filmy.json) wiąże 44 nowe ustalenia z wybranymi przedziałami 14 zachowanych tekstów — około 141 minut znaczników czasu. W tej partii **nie pobrano nowych napisów**: przeglądarka została zatrzymana na weryfikacji YouTube. Pozostałe 9 długich nagrań z partii 24 ma teraz również odczyt wybranych fragmentów, zachowany w osobnym rejestrze.
+
+Poprzednia aktualizacja: pozyskano napisy 17 kolejnych filmów; całe dostępne teksty 9 z nich i fragmenty 5 odczytano, 3 były wtedy tylko zindeksowane. Ponownie przeczytano także dwa przypadki ze wcześniejszego długiego nagrania. [Rejestr K01–K43](konkretne-filmy.json) zachowuje zakres tego etapu. **Nie jest to obejrzenie 17 filmów.** Trzy wcześniej tylko zindeksowane teksty mają teraz odczyt wybranych fragmentów w rejestrze M.
 
 Analizę setek transkrypcji opisuje [korpus filmów](korpus.md). Historyczny zapis indeksu 310 tekstów i jego braki są w [raporcie](korpus.json); wnioski sprawdzone w konkretnych fragmentach w [rejestrze przeglądu](przeglad-korpusu.json). Ponownie pozyskana partia 24 najdłuższych filmów ma [osobny raport](korpus-dlugich-filmow.json) i [rejestr fragmentów](dlugie-filmy.json). Zbiory się pokrywają: ich liczebności nie sumujemy.
 
@@ -48,11 +50,14 @@ REA bada przede wszystkim oprogramowanie. Tutaj jego moduły porządkują i kont
 - `verification.json` — wynik sprawdzenia odnośników i struktury danych.
 - [konkretne-filmy.json](konkretne-filmy.json) — 43 ustalenia o testach, ustawieniach i oczekiwaniach z dokładnym zakresem odczytu.
 - `concrete-reviews-verification.json` — zapis kontroli wersji napisów, przedziałów i powiązań z instrukcjami.
+- [progresje-filmy.json](progresje-filmy.json) — 44 dalsze ustalenia, zakres odczytu oraz zatrzymana kolejka nowych źródeł.
+- `followup-reviews-verification.json` — zapis kontroli drugiej partii konkretnych instrukcji.
 
 Kontrola publicznych metadanych i odnośników nowej partii działa bez budowania REA:
 
 ```bash
 node examples/hartman-pl/verify-concrete-reviews.mjs
+node examples/hartman-pl/verify-concrete-reviews.mjs --followup
 ```
 
 Opcja `--captions /ścieżka/do/prywatnych/napisów` dodatkowo weryfikuje dokładne bajty i fragmenty źródeł. Pełne napisy nie są publikowane. Kontrola techniczna nie ocenia trafności klinicznej instrukcji ani obrazu wideo.
