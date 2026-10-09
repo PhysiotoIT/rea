@@ -2,7 +2,13 @@
 
 To opis jego rozumowania na podstawie wypowiedzi, a nie potwierdzenie skuteczności klinicznej całego modelu. Źródła, czasy i zakres sprawdzenia są w [przeglądzie korpusu](przeglad-korpusu.json). Szersze wyjaśnienie pojęć znajdziesz w [przewodniku](przewodnik.md).
 
-**Najkrócej: Hartman patrzy, jak człowiek radzi sobie z zadaniem, zastanawia się, co ogranicza jego wybór, zmienia warunki i sprawdza reakcję.**
+Rozwinięcie z wybranych fragmentów 15 długich nagrań znajdziesz w [decyzjach wyjaśnionych na podstawie długich filmów](dlugie-filmy.md). Nowe ustalenia L01–L60 mają osobny [rejestr źródłowy](dlugie-filmy.json); zakres ich odczytu różni się od wcześniejszego przeglądu.
+
+**Najpierw konkret:** w teście unoszenia nogi w staniu patrzy na boczną ucieczkę miednicy, unoszenie biodra, przechylenie tułowia i kierunek kolana. W pomiarze barku kontroluje obrót ramienia; po dobranym wariancie noszenia ciężaru ponawia test przy ścianie, szukając wyższego zakresu bez zmiany kierunku łokcia i kontaktu pleców. W osobnym przypadku proponuje wstawanie z siedziska, na którym biodra są powyżej kolan, lewa stopa przed prawą, z naciskiem prawej stopy. Szuka więcej lewej ER i prawej IR biodra oraz zmiany kontaktów stóp. Źródła: **K01–K04, K10–K14, K18–K20** w [instrukcjach konkretnych testów i ćwiczeń](konkretne-przypadki.md).
+
+Tam znajdziesz kolejność wykonania, oczekiwania dla poszczególnych przypadków i filmy z czasami. Poniższe pojęcia pomagają zrozumieć, dlaczego autor dokonuje tych wyborów.
+
+W [dalszych konkretnych decyzjach](progresje-i-pomiary.md) znajdziesz np. wybór ręki z ciężarem w split squat, porównanie goblet squat z talerzem wysuniętym przed siebie i cofnięcie z podporu na wyprostowanej ręce do podporu na przedramieniu/biodrze. Zamiast przypisywać ćwiczenie do samej nazwy problemu, każda karta wskazuje obserwowane zachowanie, zmieniany warunek i sposób sprawdzenia odpowiedzi. Źródła: **M01–M44** w osobnym [rejestrze odczytu](progresje-filmy.json).
 
 ## 1. Najpierw zadanie i cel
 
@@ -42,6 +48,10 @@ Uproszczenie brzmi: **zanim poprosisz o nowy ruch, sprawdź, czy osoba ma warunk
 
 Autor opisuje wielokrotne testowanie i ponowne testowanie. Mówi również o zmianach własnej interpretacji pomiarów i faz ruchu. Starsze i nowsze nagrania nie muszą więc przedstawiać identycznej wersji modelu. Źródła: **C11–C12, C35**. Udana kolejność pracy w jednym przypadku nie staje się automatycznie regułą dla kolejnej osoby.
 
+W dłuższej rozmowie pyta konkretnie, czy poprawa uzyskana w odciążeniu pozostaje po wstaniu. W rozmowie o programowaniu pyta, czy dodatkową siłę można wykorzystać w czasie dostępnym w sporcie. Te przykłady pokazują dwa poziomy sprawdzenia: odpowiedź na ćwiczenie oraz efekt w zadaniu docelowym. Źródła: **L06, L27**.
+
+Również po sukcesie wraca do alternatywnych wyjaśnień i skutków drugorzędnych. W praktyce jego rozumowanie pozostaje hipotezą aktualizowaną przez nowe informacje. Źródła: **L25–L26, L46–L47**.
+
 ```mermaid
 flowchart TD
   A["Zadanie i cel"] --> B["Obserwacja i pomiary"]
@@ -55,14 +65,14 @@ Schemat jest uproszczoną rekonstrukcją analityka. Nie ustala, jakie ćwiczenie
 
 ## Gdzie mieszczą się ISA, oddech i „szachownica”?
 
-| Element | Prostsze znaczenie w rozumowaniu |
-| --- | --- |
-| ISA i archetyp | Punkt wyjścia do hipotezy o tendencjach budowy; obecny pomiar może być zmieniony przez kolejne adaptacje. |
-| Ruch względny | Części mogą zmieniać położenie względem siebie. |
-| Orientacja | Większa część ciała zmienia położenie jako całość. |
-| Oddech | Jedna z możliwości zmiany warunków ruchu; nazwa strategii nie zawsze oznacza dosłownie fazę oddychania podczas chodzenia. |
-| Szachownica | Zestaw pomiarów, który autor interpretuje razem, aby postawić hipotezę. |
-| Test–retest | Sprawdzenie reakcji; nie jest samodzielnym dowodem całej teorii. |
+| Element        | Prostsze znaczenie w rozumowaniu                                                                                          |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| ISA i archetyp | Punkt wyjścia do hipotezy o tendencjach budowy; obecny pomiar może być zmieniony przez kolejne adaptacje.                 |
+| Ruch względny  | Części mogą zmieniać położenie względem siebie.                                                                           |
+| Orientacja     | Większa część ciała zmienia położenie jako całość.                                                                        |
+| Oddech         | Jedna z możliwości zmiany warunków ruchu; nazwa strategii nie zawsze oznacza dosłownie fazę oddychania podczas chodzenia. |
+| Szachownica    | Zestaw pomiarów, który autor interpretuje razem, aby postawić hipotezę.                                                   |
+| Test–retest    | Sprawdzenie reakcji; nie jest samodzielnym dowodem całej teorii.                                                          |
 
 Źródła: **P1–P3, G1–G3, C09–C12**. Liczba powtórzeń danej idei w filmach mówi o znaczeniu tej idei dla autora, nie o liczbie niezależnych potwierdzeń naukowych.
 
