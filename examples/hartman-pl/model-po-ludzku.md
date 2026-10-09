@@ -4,7 +4,9 @@ To opis jego rozumowania na podstawie wypowiedzi, a nie potwierdzenie skuteczno�
 
 Rozwinięcie z wybranych fragmentów 15 długich nagrań znajdziesz w [decyzjach wyjaśnionych na podstawie długich filmów](dlugie-filmy.md). Nowe ustalenia L01–L60 mają osobny [rejestr źródłowy](dlugie-filmy.json); zakres ich odczytu różni się od wcześniejszego przeglądu.
 
-**Najkrócej: Hartman patrzy, jak człowiek radzi sobie z zadaniem, zastanawia się, co ogranicza jego wybór, zmienia warunki i sprawdza reakcję.**
+**Najpierw konkret:** w teście unoszenia nogi w staniu patrzy na boczną ucieczkę miednicy, unoszenie biodra, przechylenie tułowia i kierunek kolana. W pomiarze barku kontroluje obrót ramienia; po dobranym wariancie noszenia ciężaru ponawia test przy ścianie, szukając wyższego zakresu bez zmiany kierunku łokcia i kontaktu pleców. W osobnym przypadku proponuje wstawanie z siedziska, na którym biodra są powyżej kolan, lewa stopa przed prawą, z naciskiem prawej stopy. Szuka więcej lewej ER i prawej IR biodra oraz zmiany kontaktów stóp. Źródła: **K01–K04, K10–K14, K18–K20** w [instrukcjach konkretnych testów i ćwiczeń](konkretne-przypadki.md).
+
+Tam znajdziesz kolejność wykonania, oczekiwania dla poszczególnych przypadków i filmy z czasami. Poniższe pojęcia pomagają zrozumieć, dlaczego autor dokonuje tych wyborów.
 
 ## 1. Najpierw zadanie i cel
 

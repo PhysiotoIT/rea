@@ -6,12 +6,15 @@ Niezależne opracowanie publicznie opisanego modelu UHPC Billa Hartmana dla fizj
 
 ## Zacznij tutaj
 
-1. Zacznij od [prostej rekonstrukcji modelu](model-po-ludzku.md). Następnie przeczytaj [przewodnik](przewodnik.md). Osiem krótkich lekcji buduje pojęcia od podstaw.
-2. Zajrzyj do [słownika](slownik.md), gdy trafisz na ISA, relative motion, compression lub propulsion.
-3. Przejdź przez [cztery przykłady](przypadki.md): biodro, bark, hamstring i powrót do piłki po ACL.
-4. Użyj [karty rozumowania](karta-rozumowania.md) do opisania jednej hipotezy i jej sprawdzenia.
-5. Przejdź przez [dwa rzeczywiście przeanalizowane filmy](filmy.md), korzystając z odnośników do konkretnych momentów.
-6. Przeczytaj [rozwinięcie na podstawie długich filmów](dlugie-filmy.md): 24 pełne teksty zindeksowane, wybrane fragmenty 15 filmów odczytane i 60 nowych wniosków.
+1. Zacznij od [konkretnych testów i ćwiczeń](konkretne-przypadki.md): 11 kart z ustawieniem, obserwowanym zachowaniem, kryterium sprawdzenia i odnośnikami czasowymi. Przypadek barku prowadzi od pomiaru przez wybór ćwiczenia do testu przy ścianie. Osobny przypadek wstawania określa wysokość siedziska, ustawienie stóp i oczekiwane zmiany.
+2. Następnie przejdź do [rekonstrukcji modelu](model-po-ludzku.md) i [przewodnika](przewodnik.md). Osiem krótkich lekcji buduje pojęcia od podstaw.
+3. Zajrzyj do [słownika](slownik.md), gdy trafisz na ISA, relative motion, compression lub propulsion.
+4. Przejdź przez [cztery przykłady dydaktyczne](przypadki.md): biodro, bark, hamstring i powrót do piłki po ACL.
+5. Użyj [karty rozumowania](karta-rozumowania.md) do opisania jednej hipotezy i jej sprawdzenia.
+6. Przejdź przez [dwa rzeczywiście przeanalizowane filmy](filmy.md), korzystając z odnośników do konkretnych momentów.
+7. Przeczytaj [rozwinięcie na podstawie długich filmów](dlugie-filmy.md): 24 pełne teksty zindeksowane, wybrane fragmenty 15 filmów odczytane i 60 nowych wniosków.
+
+Ostatnia aktualizacja: pozyskano napisy 17 kolejnych filmów; całe dostępne teksty 9 z nich i fragmenty 5 odczytano, 3 pozostają tylko zindeksowane. Ponownie przeczytano także dwa przypadki ze wcześniejszego długiego nagrania. [Rejestr K01–K43](konkretne-filmy.json) rozdziela te zakresy i podaje brakujące instrukcje. **Nie jest to obejrzenie 17 filmów.**
 
 Analizę setek transkrypcji opisuje [korpus filmów](korpus.md). Historyczny zapis indeksu 310 tekstów i jego braki są w [raporcie](korpus.json); wnioski sprawdzone w konkretnych fragmentach w [rejestrze przeglądu](przeglad-korpusu.json). Ponownie pozyskana partia 24 najdłuższych filmów ma [osobny raport](korpus-dlugich-filmow.json) i [rejestr fragmentów](dlugie-filmy.json). Zbiory się pokrywają: ich liczebności nie sumujemy.
 
@@ -43,6 +46,16 @@ REA bada przede wszystkim oprogramowanie. Tutaj jego moduły porządkują i kont
 - [Otwarte pytania](niewiadome.json).
 - `rea-evidence.json` — wygenerowany pakiet Evidence.
 - `verification.json` — wynik sprawdzenia odnośników i struktury danych.
+- [konkretne-filmy.json](konkretne-filmy.json) — 43 ustalenia o testach, ustawieniach i oczekiwaniach z dokładnym zakresem odczytu.
+- `concrete-reviews-verification.json` — zapis kontroli wersji napisów, przedziałów i powiązań z instrukcjami.
+
+Kontrola publicznych metadanych i odnośników nowej partii działa bez budowania REA:
+
+```bash
+node examples/hartman-pl/verify-concrete-reviews.mjs
+```
+
+Opcja `--captions /ścieżka/do/prywatnych/napisów` dodatkowo weryfikuje dokładne bajty i fragmenty źródeł. Pełne napisy nie są publikowane. Kontrola techniczna nie ocenia trafności klinicznej instrukcji ani obrazu wideo.
 
 W zbudowanym checkoutcie REA:
 
