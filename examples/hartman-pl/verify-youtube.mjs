@@ -42,6 +42,15 @@ assert.throws(() =>
   parseCaptions(fixture, { ...video, video_id: "N0GDdA0MPCo" }),
 );
 assert.throws(() => parseCaptions("Only a video description", video));
+const rounded = parseCaptions(
+  "[0:00] First.\n[0:00] Second.\n[0:02] Third.\n[0:02] Fourth.",
+  video,
+);
+assert.deepEqual(
+  rounded.cues.map((cue) => cue.end),
+  [2, 2, null, null],
+);
+assert.equal(rounded.cues.length, 4);
 assert.throws(() => parseCaptions("[0:04] First\n[0:01] Second", video));
 const vtt =
   "WEBVTT\n\n00:00:01.000 --> 00:00:03.000 align:start\n<c>One &amp; two.</c>\n\n";

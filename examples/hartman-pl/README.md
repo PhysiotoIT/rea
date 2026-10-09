@@ -6,11 +6,13 @@ Niezależne opracowanie publicznie opisanego modelu UHPC Billa Hartmana dla fizj
 
 ## Zacznij tutaj
 
-1. Przeczytaj [przewodnik](przewodnik.md). Osiem krótkich lekcji buduje pojęcia od podstaw.
+1. Zacznij od [prostej rekonstrukcji modelu](model-po-ludzku.md). Następnie przeczytaj [przewodnik](przewodnik.md). Osiem krótkich lekcji buduje pojęcia od podstaw.
 2. Zajrzyj do [słownika](slownik.md), gdy trafisz na ISA, relative motion, compression lub propulsion.
 3. Przejdź przez [cztery przykłady](przypadki.md): biodro, bark, hamstring i powrót do piłki po ACL.
 4. Użyj [karty rozumowania](karta-rozumowania.md) do opisania jednej hipotezy i jej sprawdzenia.
 5. Przejdź przez [dwa rzeczywiście przeanalizowane filmy](filmy.md), korzystając z odnośników do konkretnych momentów.
+
+Analizę setek transkrypcji opisuje [korpus filmów](korpus.md). Aktualne liczby, zakres odczytu i braki są w [raporcie](korpus.json); wnioski sprawdzone w konkretnych fragmentach w [rejestrze przeglądu](przeglad-korpusu.json).
 
 Do dalszej pracy na filmach służy [narzędzie YouTube](youtube.md): import napisów, wyszukiwanie, paczki do analizy, wnioski ze znacznikami czasu oraz klatki z lokalnego wideo.
 
@@ -51,4 +53,4 @@ node scripts/rea.mjs evidence-import examples/hartman-pl/rea-evidence.json
 
 Budowanie CLI opisuje główne [README REA](../../README.md). Te komendy nie instalują silników analizy ani nie zmieniają konfiguracji agenta.
 
-Stan opracowania: 8 października 2026.
+Stan opracowania: 9 października 2026. Dwa filmy opisane w `filmy.md` stanowią osobny, wcześniejszy etap; całkowite pokrycie korpusu podaje `korpus.json`.

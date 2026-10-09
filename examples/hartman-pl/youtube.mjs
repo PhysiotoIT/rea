@@ -3,29 +3,10 @@ import { execFileSync } from "node:child_process";
 import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
 import { basename, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { videoIdentity } from "./youtube-identity.mjs";
+export { videoIdentity };
 
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
-
-/** Accept one public YouTube video, never a playlist or an arbitrary host. */
-export function videoIdentity(input) {
-  const url = new URL(input);
-  if (url.protocol !== "https:") throw new Error("Use an HTTPS YouTube URL.");
-  if (url.username || url.password)
-    throw new Error("Credentials in URLs are unsupported.");
-  let id;
-  if (url.hostname === "youtu.be") id = url.pathname.slice(1);
-  else if (
-    ["youtube.com", "www.youtube.com", "m.youtube.com"].includes(url.hostname)
-  ) {
-    id =
-      url.pathname === "/watch"
-        ? url.searchParams.get("v")
-        : url.pathname.match(/^\/(?:embed|shorts)\/([^/]+)$/u)?.[1];
-  }
-  if (!id || !/^[\w-]{11}$/u.test(id))
-    throw new Error("Expected one valid YouTube video URL.");
-  return { video_id: id, url: "https://www.youtube.com/watch?v=" + id };
-}
 
 /** Parse caption clock values into seconds without treating minutes as decimals. */
 export function seconds(input) {
@@ -52,8 +33,15 @@ function plainCaption(text) {
 }
 
 function normalizeCues(cues, duration) {
+  const inferredEnds = Array.from({ length: cues.length }, () => duration);
+  let nextLaterStart = duration;
+  for (let index = cues.length - 1; index >= 0; index -= 1) {
+    if (cues[index + 1]?.start > cues[index].start)
+      nextLaterStart = cues[index + 1].start;
+    inferredEnds[index] = nextLaterStart;
+  }
   return cues.map((cue, index) => {
-    const end = cue.end ?? cues[index + 1]?.start ?? duration;
+    const end = cue.end ?? inferredEnds[index];
     if (
       !Number.isFinite(cue.start) ||
       cue.start < 0 ||
@@ -131,7 +119,7 @@ export function parseCaptions(text, identity, { duration = null } = {}) {
     cues = subtitleCues(text);
   } else {
     format = "timestamped-text";
-    endBasis = "next-cue-or-supplied-duration";
+    endBasis = "next-strictly-later-cue-or-supplied-duration";
     for (const line of text.split(/\r?\n/u)) {
       const match = line.match(/^\[([^\]]+)\]\s+(.+)$/u);
       if (match)
