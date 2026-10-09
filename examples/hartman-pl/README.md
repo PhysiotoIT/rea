@@ -11,8 +11,9 @@ Niezależne opracowanie publicznie opisanego modelu UHPC Billa Hartmana dla fizj
 3. Przejdź przez [cztery przykłady](przypadki.md): biodro, bark, hamstring i powrót do piłki po ACL.
 4. Użyj [karty rozumowania](karta-rozumowania.md) do opisania jednej hipotezy i jej sprawdzenia.
 5. Przejdź przez [dwa rzeczywiście przeanalizowane filmy](filmy.md), korzystając z odnośników do konkretnych momentów.
+6. Przeczytaj [rozwinięcie na podstawie długich filmów](dlugie-filmy.md): 24 pełne teksty zindeksowane, wybrane fragmenty 15 filmów odczytane i 60 nowych wniosków.
 
-Analizę setek transkrypcji opisuje [korpus filmów](korpus.md). Aktualne liczby, zakres odczytu i braki są w [raporcie](korpus.json); wnioski sprawdzone w konkretnych fragmentach w [rejestrze przeglądu](przeglad-korpusu.json).
+Analizę setek transkrypcji opisuje [korpus filmów](korpus.md). Historyczny zapis indeksu 310 tekstów i jego braki są w [raporcie](korpus.json); wnioski sprawdzone w konkretnych fragmentach w [rejestrze przeglądu](przeglad-korpusu.json). Ponownie pozyskana partia 24 najdłuższych filmów ma [osobny raport](korpus-dlugich-filmow.json) i [rejestr fragmentów](dlugie-filmy.json). Zbiory się pokrywają: ich liczebności nie sumujemy.
 
 Do dalszej pracy na filmach służy [narzędzie YouTube](youtube.md): import napisów, wyszukiwanie, paczki do analizy, wnioski ze znacznikami czasu oraz klatki z lokalnego wideo.
 
@@ -27,7 +28,7 @@ Najpierw zrozum różnicę między ruchem jednego segmentu względem drugiego a 
 | Interpretacja dydaktyczna | Nasz przykład albo sposób uporządkowania materiału.                              |
 | Niewiadoma                | Potrzebne są dodatkowe informacje lub badania.                                   |
 
-Rekonstrukcja dotyczy publicznego rdzenia modelu. Nie obejmuje całego płatnego programu, każdej reguły doboru ćwiczeń ani zweryfikowanego protokołu leczenia. Przykłady pacjentów są fikcyjne i służą nauce rozumowania.
+Rekonstrukcja dotyczy publicznego rdzenia modelu. Nie obejmuje całego płatnego programu, każdej reguły doboru ćwiczeń ani zweryfikowanego protokołu leczenia. Przykłady w `przypadki.md` są fikcyjne i służą nauce rozumowania. Przypadki opowiedziane przez autora w filmach pozostają jego relacjami, bez niezależnej weryfikacji.
 
 ## Gdzie tu REA?
 
@@ -53,4 +54,4 @@ node scripts/rea.mjs evidence-import examples/hartman-pl/rea-evidence.json
 
 Budowanie CLI opisuje główne [README REA](../../README.md). Te komendy nie instalują silników analizy ani nie zmieniają konfiguracji agenta.
 
-Stan opracowania: 9 października 2026. Dwa filmy opisane w `filmy.md` stanowią osobny, wcześniejszy etap; całkowite pokrycie korpusu podaje `korpus.json`.
+Stan opracowania: 9 października 2026. Dwa filmy opisane w `filmy.md`, historyczny korpus 310 tekstów i partia najdłuższych filmów mają oddzielne zakresy oraz wersje źródeł. Dokumentacja każdego etapu podaje jego rzeczywiste pokrycie.
