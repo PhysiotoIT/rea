@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-09",
+  "language": "pl",
+  "purpose": "Clinician-reviewed educational case cards; no automatic diagnosis or treatment selection.",
+  "clinical_validation": "not_performed",
+  "new_caption_texts_obtained_in_this_update": 0,
+  "dose_provenance": "All numeric trial/training doses are educational_interpretation, not recovered Hartman prescriptions.",
+  "integration_status": "example_data_not_connected_to_live_exercise_generator",
+  "clinical_references": [
+    {
+      "id": "PFP2024",
+      "title": "Best practice guide for patellofemoral pain",
+      "year": 2024,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39401870/",
+      "doi": "10.1136/bjsports-2024-108110",
+      "consulted_scope": "Primary publication abstract",
+      "supports_pl": "Edukacja i ćwiczenia ukierunkowane na kolano, z ewentualnymi ćwiczeniami biodra; dodatki indywidualnie.",
+      "does_not_establish_pl": "Skuteczność szczególnego doboru TRX, dawek z kart ani mechanizmów Hartmana."
+    },
+    {
+      "id": "RC2025",
+      "title": "Rotator Cuff Tendinopathy Diagnosis, Nonsurgical Medical Care, and Rehabilitation: A Clinical Practice Guideline",
+      "year": 2025,
+      "url": "https://www.jospt.org/doi/10.2519/jospt.2025.13182",
+      "doi": "10.2519/jospt.2025.13182",
+      "consulted_scope": "Indexed recommendation from primary publisher; full article retrieval unavailable",
+      "supports_pl": "Aktywna rehabilitacja w tendinopatii stożka rotatorów, m.in. trening oporowy lub kontroli ruchu.",
+      "does_not_establish_pl": "Dobór suitcase carry, wszystkich rozpoznań barku ani dawek z karty."
+    },
+    {
+      "id": "ACL2023",
+      "title": "Aspetar clinical practice guideline on rehabilitation after ACLR",
+      "year": 2023,
+      "url": "https://www.aspetar.com/en/professionals/aspetar-clinical-guidelines/recommendations-on-rehabilitation-after-aclr",
+      "doi": "10.1136/bjsports-2022-106158",
+      "consulted_scope": "Official recommendation page",
+      "supports_pl": "Ćwiczenia, indywidualna progresja, ochrona gojenia i łączenie siły z kontrolą ruchu.",
+      "does_not_establish_pl": "Gotowość do biegu/RTS z samego krótkiego retestu ani uniwersalne dawkowanie."
+    }
+  ],
+  "shared_decision_rules": {
+    "origin": "educational_interpretation",
+    "variant_tolerance_pl": "Czy wariant umożliwia uzgodniony trening?",
+    "transfer_pl": "Czy poprawia się pierwotne zadanie w jego pierwotnych warunkach?",
+    "no_immediate_transfer_pl": "Brak natychmiastowego transferu nie wyklucza użytecznej regresji do obciążania.",
+    "monitoring_pl": "Indywidualna tolerancja; zapis podczas, po sesji i kolejnego dnia jest propozycją, nie uniwersalnym progiem dla wszystkich rozpoznań.",
+    "postoperative_boundary_pl": "Przykładowych dawek nie przenoś na wczesną rehabilitację pooperacyjną; etap gojenia i zalecenia wymagają osobnej decyzji.",
+    "mechanism_pl": "Odpowiedź na próbę nie potwierdza jednej przyczyny ani trwałej adaptacji."
+  },
+  "cases": [
+    {
+      "id": "PFP-STEPDOWN",
+      "title_pl": "Ból rzepkowo-udowy: schodzenie ze stopnia",
+      "scope_pl": "Po badaniu i ustaleniu rozpoznania PFP; nie dla świeżego urazu ani jako protokół pooperacyjny.",
+      "patient_goal_pl": "Łatwiejsze schodzenie ze schodów.",
+      "baseline_test": {
+        "origin": "educational_interpretation",
+        "setup_pl": "Pięć step-downów ze stopnia dobranego do możliwości; przykładowo 15 cm. Zapisz stronę, obuwie, podparcie i tempo. Zejście do lekkiego dotknięcia piętą wolnej nogi podłogi i powrót.",
+        "measure_pl": [
+          "Objawy w zadaniu",
+          "Moment odciążania nogi",
+          "Możliwość ukończenia próby"
+        ]
+      },
+      "capacity_measure_pl": "Powtarzalny pomiar siły prostowników kolana, jeśli wynik zmieni prescription. Badanie zakresu dobierz do wskazań.",
+      "working_hypothesis_pl": "Łatwiejszy wariant może umożliwić tolerowane obciążanie; odpowiedź nie identyfikuje jednej przyczyny bólu.",
+      "trial": {
+        "origin": "educational_interpretation",
+        "exercise_pl": "Przysiad z TRX do boxu",
+        "setup_pl": "Twarzą do stabilnego zakotwiczenia, uchwyty w dłoniach; pomoc rękami i wysokość boxu dobrana do możliwości. Dotknięcie boxu bez opadania. Zapisz stopy i pomoc.",
+        "changed_variable_pl": "Podparcie rękami przy porównaniu tej samej wysokości boxu; wstępny dobór wysokości to osobny etap.",
+        "cue_pl": "Zejdź do boxu z taką pomocą, jakiej potrzebujesz.",
+        "dose": {
+          "origin": "educational_interpretation",
+          "text_pl": "3–5 spokojnych powtórzeń, jeśli kontekst kliniczny pozwala."
+        },
+        "expected_result_pl": "Tolerowane wykonanie uzgodnionego zakresu. Transfer sprawdzany osobno."
+      },
+      "training_example": {
+        "origin": "educational_interpretation",
+        "requires_individual_prescription": true,
+        "items": [
+          {
+            "exercise_pl": "Przysiad z TRX do boxu",
+            "dose_pl": "2 × 8; pomoc, zakres i obciążenie dobrane po próbie."
+          },
+          {
+            "exercise_pl": "Wyprost kolana na maszynie",
+            "dose_pl": "2 × 10 w tolerowanym zakresie, około 3 powtórzeń w zapasie."
+          }
+        ],
+        "frequency_pl": "Przykładowo 2–3 treningi tygodniowo, dostosowane do całości obciążeń."
+      },
+      "progression_pl": "Po powtarzalnej tolerancji zwiększ jeden parametr: ciężar, powtórzenia, zakres albo zmniejsz pomoc.",
+      "regression_pl": "Zmniejsz jeden parametr dawki przekraczającej uzgodnioną tolerancję; przy nowym obrzęku lub pogorszeniu funkcji ponownie oceń stan.",
+      "transfer_test_pl": "Pierwotny step-down w pierwotnych warunkach oraz schody w codzienności.",
+      "long_term_outcome_pl": "Łatwiejsze schody, wyższe tolerowane obciążenie i poprawa wybranego pomiaru siły.",
+      "hartman_context_pl": "Podparcie TRX i zmiana zadania przy braku dostępu do wymaganej pozycji; zastosowanie do PFP i dawki są nasze.",
+      "source_findings": [
+        {
+          "ledger": "progresje-filmy.json",
+          "finding_id": "M11",
+          "video_id": "fulsR_rERF4",
+          "transcript_sha256": "1cef900c134824567e5033b96995a5e245171e6db693646eb532ac2bc856edb0",
+          "source_url": "https://www.youtube.com/watch?v=fulsR_rERF4&t=349s",
+          "start_seconds": 349,
+          "end_seconds": 594,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "progresje-filmy.json",
+          "finding_id": "M12",
+          "video_id": "fulsR_rERF4",
+          "transcript_sha256": "1cef900c134824567e5033b96995a5e245171e6db693646eb532ac2bc856edb0",
+          "source_url": "https://www.youtube.com/watch?v=fulsR_rERF4&t=428s",
+          "start_seconds": 428,
+          "end_seconds": 515,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        }
+      ],
+      "clinical_reference_ids": [
+        "PFP2024"
+      ]
+    },
+    {
+      "id": "SPLIT-SQUAT-LOAD",
+      "title_pl": "Split squat: położenie ciężaru",
+      "scope_pl": "Dla pacjenta, który może już wykonywać i obciążać split squat; porównanie wariantów, nie diagnostyka na podstawie toru kolana.",
+      "patient_goal_pl": "Tolerowane obciążanie w split squacie oraz poprawa indywidualnie wybranego zadania.",
+      "baseline_test": {
+        "origin": "educational_interpretation",
+        "setup_pl": "Trzy zejścia; zapis długości i szerokości wykroku, głębokości, masy, dłoni z ciężarem i tempa.",
+        "measure_pl": [
+          "Objawy",
+          "Trudność i osiągany zakres",
+          "Tor kolana oraz zachowanie tułowia"
+        ]
+      },
+      "capacity_measure_pl": "Pomiar zdolności adekwatny do celu; nie ustanawiamy obowiązkowego progu IR.",
+      "working_hypothesis_pl": "Zmiana strony obciążenia może ułatwić wymagane wykonanie; boczny tor kolana nie potwierdza niedoboru IR.",
+      "trial": {
+        "origin": "educational_interpretation",
+        "exercise_pl": "Split squat z ciężarem w przeciwnej dłoni do przedniej nogi",
+        "setup_pl": "Lewa noga z przodu → ciężar w prawej dłoni; prawa noga z przodu → ciężar w lewej. Pozostałe warunki jak w próbie wyjściowej.",
+        "changed_variable_pl": "Dłoń trzymająca tę samą masę w porównaniu dwóch wariantów jednostronnych.",
+        "cue_pl": "Zejdź do uzgodnionej głębokości.",
+        "dose": {
+          "origin": "educational_interpretation",
+          "text_pl": "Trzy porównywalne powtórzenia przy tolerowanej masie."
+        },
+        "expected_result_pl": "Łatwiejsze osiągnięcie celu przy akceptowalnych objawach; zanotuj także zmianę tułowia."
+      },
+      "training_example": {
+        "origin": "educational_interpretation",
+        "requires_individual_prescription": true,
+        "items": [
+          {
+            "exercise_pl": "Wybrany wariant split squatu",
+            "dose_pl": "Przykładowo 2 × 6 na stronę, około 3 powtórzeń w zapasie."
+          }
+        ],
+        "frequency_pl": "Dobierz do całego planu i odpowiedzi pacjenta."
+      },
+      "progression_pl": "Zwiększ tolerowany ciężar lub objętość; później porównaj inne ustawienia obciążenia.",
+      "regression_pl": "Zmniejsz masę, zakres lub użyj podparcia; każdą dodatkową zmianę zapisz.",
+      "transfer_test_pl": "Indywidualne zadanie, np. wejście na stopień, w powtarzalnych warunkach.",
+      "long_term_outcome_pl": "Większa zdolność obciążania i poprawa wybranego zadania; nie tylko inny tor kolana.",
+      "hartman_context_pl": "Autor proponuje przeciwległą dłoń przy obserwowanej bocznej zmianie toru kolana; wyjaśnienie przez IR pozostaje hipotezą jego modelu.",
+      "source_findings": [
+        {
+          "ledger": "progresje-filmy.json",
+          "finding_id": "M13",
+          "video_id": "JYGZ7ISTBEU",
+          "transcript_sha256": "8563bbe81e6e26372ad6328e512c2b14af0993e46614b8bb6a8de61061880416",
+          "source_url": "https://www.youtube.com/watch?v=JYGZ7ISTBEU&t=983s",
+          "start_seconds": 983,
+          "end_seconds": 1008,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "progresje-filmy.json",
+          "finding_id": "M14",
+          "video_id": "JYGZ7ISTBEU",
+          "transcript_sha256": "8563bbe81e6e26372ad6328e512c2b14af0993e46614b8bb6a8de61061880416",
+          "source_url": "https://www.youtube.com/watch?v=JYGZ7ISTBEU&t=1009s",
+          "start_seconds": 1009,
+          "end_seconds": 1023,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "progresje-filmy.json",
+          "finding_id": "M15",
+          "video_id": "JYGZ7ISTBEU",
+          "transcript_sha256": "8563bbe81e6e26372ad6328e512c2b14af0993e46614b8bb6a8de61061880416",
+          "source_url": "https://www.youtube.com/watch?v=JYGZ7ISTBEU&t=983s",
+          "start_seconds": 983,
+          "end_seconds": 1027,
+          "kind": "educational_interpretation",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        }
+      ],
+      "clinical_reference_ids": []
+    },
+    {
+      "id": "SHOULDER-REACH",
+      "title_pl": "Bark: sięganie i suitcase carry",
+      "scope_pl": "Po ocenie barku i tolerancji obciążania; nie jest samodzielnym rozpoznaniem ani planem dla wszystkich patologii barku.",
+      "patient_goal_pl": "Łatwiejsze sięganie na półkę z potrzebnym obciążeniem.",
+      "baseline_test": {
+        "origin": "educational_interpretation",
+        "setup_pl": "Stopy nieco przed ścianą; tolerowany kontakt bioder, górnej części pleców i tyłu głowy. Unoszenie ramienia z obserwacją kierunku łokcia i utraty kontaktu. Nie wymuszaj pozycji; inna pozycja oznacza inny test.",
+        "measure_pl": [
+          "Zakres do pierwszej zmiany kontaktu",
+          "Objawy",
+          "Osobno swobodne sięganie na półkę"
+        ],
+        "author_basis_pl": "Test przy ścianie opisany w K13/K14; zapis i warunek tolerowanej pozycji są naszym opracowaniem."
+      },
+      "capacity_measure_pl": "Zdolność siłowa odpowiednia do rozpoznania i potrzebnego zadania; ustalone warunki pomiaru.",
+      "working_hypothesis_pl": "Tolerowane carry może być użytecznym wariantem obciążania; natychmiastowy retest nie potwierdza mechanizmu ani trwałego efektu.",
+      "trial": {
+        "origin": "educational_interpretation",
+        "exercise_pl": "Suitcase carry, jeżeli badanie uzasadnia próbę",
+        "setup_pl": "Hantel przy boku w wybranej dłoni; swobodny chód po płaskim podłożu, tolerowane położenie barku. Nie wymuszaj opuszczania łopatki. Nie przypisuj stron A/B z filmu do prawej/lewej.",
+        "changed_variable_pl": "Krótka ekspozycja na wybrany wariant carry; nie testuje izolowanego mechanizmu anatomicznego.",
+        "cue_pl": "Przejdź spokojnie z ciężarem przy boku.",
+        "dose": {
+          "origin": "educational_interpretation",
+          "text_pl": "Jedna próba 15–20 sekund z lekkim, tolerowanym ciężarem."
+        },
+        "expected_result_pl": "Tolerowany wariant. Osobno porównaj test przy ścianie i sięganie."
+      },
+      "training_example": {
+        "origin": "educational_interpretation",
+        "requires_individual_prescription": true,
+        "items": [
+          {
+            "exercise_pl": "Suitcase carry jako element indywidualnego planu",
+            "dose_pl": "Przykładowo 2 × 20 sekund po dobrze tolerowanej próbie, z przerwą umożliwiającą powtórzenie."
+          }
+        ],
+        "frequency_pl": "Indywidualnie, wraz z aktywnym treningiem barku odpowiednim dla rozpoznania."
+      },
+      "progression_pl": "Zwiększ jeden parametr czasu lub masy po powtarzalnej tolerancji; dobierz trening potrzebnego sięgania.",
+      "regression_pl": "Zmniejsz masę lub czas; jeśli brak użytecznego efektu, zmień wariant lub hipotezę.",
+      "transfer_test_pl": "Swobodne sięganie na tę samą półkę z tym samym obciążeniem; test przy ścianie jako osobna miara.",
+      "long_term_outcome_pl": "Łatwiejsze sięganie i większa tolerancja potrzebnego obciążenia.",
+      "hartman_context_pl": "Autor łączy kontrolowany pomiar z propozycją suitcase/rack carry. Pełna dawka i pewne przypisanie stron w przykładzie nie są dostępne.",
+      "source_findings": [
+        {
+          "ledger": "konkretne-filmy.json",
+          "finding_id": "K10",
+          "video_id": "jw1CmVIedB4",
+          "transcript_sha256": "e5a7c3ef4ee15057021b32d3a4cbf225d6d7223517958ce37b591567bb823c8a",
+          "source_url": "https://www.youtube.com/watch?v=jw1CmVIedB4&t=82s",
+          "start_seconds": 82,
+          "end_seconds": 166,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "konkretne-filmy.json",
+          "finding_id": "K11",
+          "video_id": "jw1CmVIedB4",
+          "transcript_sha256": "e5a7c3ef4ee15057021b32d3a4cbf225d6d7223517958ce37b591567bb823c8a",
+          "source_url": "https://www.youtube.com/watch?v=jw1CmVIedB4&t=253s",
+          "start_seconds": 253,
+          "end_seconds": 334,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "konkretne-filmy.json",
+          "finding_id": "K12",
+          "video_id": "jw1CmVIedB4",
+          "transcript_sha256": "e5a7c3ef4ee15057021b32d3a4cbf225d6d7223517958ce37b591567bb823c8a",
+          "source_url": "https://www.youtube.com/watch?v=jw1CmVIedB4&t=339s",
+          "start_seconds": 339,
+          "end_seconds": 365,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "konkretne-filmy.json",
+          "finding_id": "K13",
+          "video_id": "jw1CmVIedB4",
+          "transcript_sha256": "e5a7c3ef4ee15057021b32d3a4cbf225d6d7223517958ce37b591567bb823c8a",
+          "source_url": "https://www.youtube.com/watch?v=jw1CmVIedB4&t=385s",
+          "start_seconds": 385,
+          "end_seconds": 449,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "konkretne-filmy.json",
+          "finding_id": "K14",
+          "video_id": "jw1CmVIedB4",
+          "transcript_sha256": "e5a7c3ef4ee15057021b32d3a4cbf225d6d7223517958ce37b591567bb823c8a",
+          "source_url": "https://www.youtube.com/watch?v=jw1CmVIedB4&t=451s",
+          "start_seconds": 451,
+          "end_seconds": 487,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "konkretne-filmy.json",
+          "finding_id": "K15",
+          "video_id": "jw1CmVIedB4",
+          "transcript_sha256": "e5a7c3ef4ee15057021b32d3a4cbf225d6d7223517958ce37b591567bb823c8a",
+          "source_url": "https://www.youtube.com/watch?v=jw1CmVIedB4&t=194s",
+          "start_seconds": 194,
+          "end_seconds": 248,
+          "kind": "unknown",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        }
+      ],
+      "clinical_reference_ids": [
+        "RC2025"
+      ]
+    }
+  ]
+}
