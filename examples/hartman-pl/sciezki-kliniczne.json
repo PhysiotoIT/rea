@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-09",
+  "updated_on": "2026-10-10",
   "language": "pl",
   "purpose": "Clinician-reviewed educational case cards; no automatic diagnosis or treatment selection.",
   "clinical_validation": "not_performed",
@@ -333,6 +333,90 @@
       "clinical_reference_ids": [
         "RC2025"
       ]
+    },
+    {
+      "id": "FOREARM-SUPPORT",
+      "title_pl": "Podpór przez przedramię: tolerancja i przejście do siadu",
+      "scope_pl": "Własny przykład po badaniu i doborze strony. Nie jest odtworzonym protokołem low/high oblique ani prescription dla wszystkich patologii barku.",
+      "patient_goal_pl": "Łatwiejsze przejście z leżenia bokiem do siadu.",
+      "baseline_test": {
+        "origin": "educational_interpretation",
+        "setup_pl": "Przejście z leżenia bokiem do siadu możliwym sposobem. Zapisz stronę, powierzchnię, pomoc drugiej ręki i powtarzaj te warunki. Nie wymuszaj jednej techniki.",
+        "measure_pl": [
+          "Objawy i trudność",
+          "Pomoc drugiej ręki",
+          "Możliwość ukończenia zadania"
+        ]
+      },
+      "capacity_measure_pl": "Tolerowany zakres, czas i liczba prób podporu w ustalonych warunkach; dodatkowe pomiary według wskazań.",
+      "working_hypothesis_pl": "Większe podparcie może umożliwić trening obciążania przez przedramię. Odpowiedź nie potwierdza mechanizmu ciśnienia ani rotacji.",
+      "trial": {
+        "origin": "educational_interpretation",
+        "exercise_pl": "Nacisk przedramieniem i lekkie uniesienie tułowia z podpartym biodrem",
+        "setup_pl": "Leżenie bokiem, dolne przedramię podparte, łokieć pod okolicą barku; nogi komfortowo ugięte, biodro pozostaje oparte. Górna ręka może pomagać. Dobierz tolerowane ustawienie barku i zapisz pomoc.",
+        "changed_variable_pl": "Wariant o większej pomocy podłoża. Zmienia kilka wymagań, więc nie izoluje jednego mechanizmu.",
+        "cue_pl": "Odepchnij się lekko przedramieniem i wróć.",
+        "dose": {
+          "origin": "educational_interpretation",
+          "text_pl": "Przykładowo trzy próby po około 2–3 sekundy, jeśli kontekst pozwala."
+        },
+        "expected_result_pl": "Uzgodniony ruch w tolerowanej dawce. Transfer do siadu sprawdzany osobno."
+      },
+      "training_example": {
+        "origin": "educational_interpretation",
+        "requires_individual_prescription": true,
+        "items": [
+          {
+            "exercise_pl": "Podpór bokiem na przedramieniu i ugiętych kolanach z uniesieniem miednicy, jeśli odpowiedni po tolerowanej próbie",
+            "dose_pl": "Przykładowo 2 × 4 uniesienia z utrzymaniem około 3 sekund; rzeczywisty wariant, stronę i zakres dobiera terapeuta."
+          }
+        ],
+        "frequency_pl": "Indywidualnie, wraz z innymi obciążeniami i praktyką potrzebnego przejścia do siadu."
+      },
+      "progression_pl": "Po powtarzalnej tolerancji i adekwatnym wykonaniu zmień jeden wybrany parametr dawki lub dobierz trudniejszy wariant odpowiadający celowi. Brak obowiązku przejścia na rękę lub proste nogi.",
+      "regression_pl": "Zmniejsz dawkę, zakres lub zwiększ pomoc; przy istotnym pogorszeniu ponownie oceń pacjenta.",
+      "transfer_test_pl": "Pierwotne przejście z leżenia bokiem do siadu w tych samych warunkach.",
+      "long_term_outcome_pl": "Łatwiejsza potrzebna czynność, większa tolerowana zdolność podporu i samodzielność.",
+      "hartman_context_pl": "Autor rozważa większe podparcie i opisuje zwroty ku/od podporu, lecz nie podaje liczbowych progów gotowości. Nasze pozycje i dawki nie są jego protokołem.",
+      "source_findings": [
+        {
+          "ledger": "podparcie-filmy.json",
+          "finding_id": "P03",
+          "video_id": "Pu36UuGK9Nw",
+          "transcript_sha256": "15030c8da513aff4e3a5fa75e4c246997ee84b94b2a1f9aff166c109574c6aa7",
+          "source_url": "https://www.youtube.com/watch?v=Pu36UuGK9Nw&t=781s",
+          "start_seconds": 781,
+          "end_seconds": 809,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "podparcie-filmy.json",
+          "finding_id": "P04",
+          "video_id": "Pu36UuGK9Nw",
+          "transcript_sha256": "15030c8da513aff4e3a5fa75e4c246997ee84b94b2a1f9aff166c109574c6aa7",
+          "source_url": "https://www.youtube.com/watch?v=Pu36UuGK9Nw&t=809s",
+          "start_seconds": 809,
+          "end_seconds": 871,
+          "kind": "unknown",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        },
+        {
+          "ledger": "podparcie-filmy.json",
+          "finding_id": "P05",
+          "video_id": "Pu36UuGK9Nw",
+          "transcript_sha256": "15030c8da513aff4e3a5fa75e4c246997ee84b94b2a1f9aff166c109574c6aa7",
+          "source_url": "https://www.youtube.com/watch?v=Pu36UuGK9Nw&t=899s",
+          "start_seconds": 899,
+          "end_seconds": 1026,
+          "kind": "author_claim",
+          "visual_review": "pending",
+          "clinical_validation": "not_performed"
+        }
+      ],
+      "clinical_reference_ids": []
     }
   ]
 }

@@ -143,8 +143,10 @@ Przegląd na kolejnej wizycie: czy poprawia się cel pacjenta, wybrana zdolnoś�
 
 Każde ćwiczenie otrzymuje: cel, wariant i stronę, ustawienie, 1–2 wskazówki, dawkę, kryterium tolerancji, kryterium progresji i zadanie do sprawdzenia transferu. Materiał dla pacjenta powinien zawierać zrozumiałe instrukcje; interpretację ISA/IR i źródła rozumowania zachowaj w dokumentacji terapeuty.
 
-Użyj [karty wizyty](karta-wizyty.md) i [trzech ustrukturyzowanych ścieżek](sciezki-kliniczne.json). JSON jest przykładem organizacji danych do późniejszej integracji. Nie został podłączony do działającego generatora i nie wybiera ćwiczeń automatycznie.
+Użyj [karty wizyty](karta-wizyty.md) i [czterech ustrukturyzowanych ścieżek](sciezki-kliniczne.json). JSON jest przykładem organizacji danych do późniejszej integracji. Nie został podłączony do działającego generatora i nie wybiera ćwiczeń automatycznie.
 
 Przejdź do [decyzji na kolejnej wizycie](decyzje-kolejna-wizyta.md), gdy potrzebujesz ustalić odpowiedź na brak transferu, zmianę tolerancji dawki lub zależność od coachingu. [Eksporter prescription](prescription.md) przygotowuje plan z jawnie wpisanych ćwiczeń i dawek, bez dodawania pozycji z biblioteki.
+
+Wybór zakresu, pomocy i trudniejszego wariantu omawia [przewodnik podparcia i progresji](podparcie-i-progresja.md). Dodatkowa karta w danych ścieżek opisuje naszą próbę obciążania przez przedramię; nie jest odtworzonym protokołem low/high oblique Hartmana.
 
 Filmowe odnośniki pokazują wypowiedzi autora; ich obraz nadal wymaga kontroli. Dawkowanie i proponowane retesty w tym dokumencie są nasze. Pełne napisy, liczebności korpusu oraz dotychczasowy zakres odczytu pozostają opisane w istniejących rejestrach K/M.

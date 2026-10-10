@@ -7,7 +7,7 @@ import { parseCaptions, validateFindings, videoIdentity } from "./youtube.mjs";
 
 const directory = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
-const mode = ["--followup", "--decisions"].includes(args[0])
+const mode = ["--followup", "--decisions", "--support"].includes(args[0])
   ? args.shift()
   : "";
 const followup = mode === "--followup";
@@ -25,6 +25,10 @@ const configurations = {
   "--decisions": [
     "N", "decyzje-filmy.json", "decyzje-kolejna-wizyta.md",
     "decisions-reviews-verification.json",
+  ],
+  "--support": [
+    "P", "podparcie-filmy.json", "podparcie-i-progresja.md",
+    "support-reviews-verification.json",
   ],
 };
 const [prefix, ledgerFile, documentFile, verificationFile] =
@@ -137,9 +141,17 @@ async function checkLongestCohort() {
 
 async function checkRetainedExtensions() {
   const previous = [];
-  for (const name of ["konkretne-filmy.json", "progresje-filmy.json"]) {
+  const ledgerNames = ["konkretne-filmy.json", "progresje-filmy.json"];
+  if (mode === "--support")
+    ledgerNames.push("dlugie-filmy.json", "decyzje-filmy.json");
+  for (const name of ledgerNames) {
     const ledger = JSON.parse(await readFile(resolve(directory, name), "utf8"));
-    previous.push(...ledger.reviews);
+    const rows = Array.isArray(ledger) ? ledger : ledger.reviews;
+    previous.push(...rows.map((review) => ({
+      ...review,
+      read_intervals: review.read_intervals ??
+        review.reviewed_intervals.map(({ start, end }) => [start, end]),
+    })));
   }
   for (const review of data.reviews) {
     const matches = previous.filter(
@@ -157,7 +169,8 @@ async function checkRetainedExtensions() {
   }
 }
 
-if (mode === "--decisions") await checkRetainedExtensions();
+if (["--decisions", "--support"].includes(mode))
+  await checkRetainedExtensions();
 checkAcquisition(data.acquisition, data.summary);
 assert.equal(data.reviews.length, data.summary.reviewed_sources);
 assert.equal(

@@ -6,6 +6,8 @@ Niezależne opracowanie publicznie opisanego modelu UHPC Billa Hartmana dla fizj
 
 ## Zacznij tutaj
 
+**Dobór podparcia i progresji:** [praktyczny przewodnik](podparcie-i-progresja.md) rozdziela pomoc, głębokość, dźwignię, masę i geometrię podparcia stopy. Dodaje konkretną własną próbę obciążania przez przedramię oraz kryteria jej zmiany. Ustalenia **P01–P10** pochodzą z 16 minut kolejnych przedziałów trzech zachowanych tekstów; bez nowych pobrań i bez kontroli obrazu. Dane ścieżek zawierają teraz również wariant podporu.
+
 **Do wdrożenia w gabinecie:** [framework badania i prescription](framework-gabinet.md) prowadzi od celu pacjenta do testu, jednej zmiany, dawki i progresji. Zawiera trzy konkretne ścieżki: ból rzepkowo-udowy, split squat i sięganie ponad głowę, a także zasady stosowania po ACL. Użyj [pustej karty wizyty](karta-wizyty.md) i [danych ścieżek](sciezki-kliniczne.json). To nasza synteza do decyzji terapeuty; dawki nie są przypisane Hartmanowi, a JSON nie jest jeszcze integracją z generatorem.
 
 **Kolejne wizyty i plan dla pacjenta:** [osiem sytuacji decyzyjnych](decyzje-kolejna-wizyta.md) wyjaśnia, co zrobić przy braku transferu, narastaniu objawów z dawką oraz zależności od wskazówek. Nowy przypadek koszykarza i ustalenia **N01–N11** pochodzą z 24,5 minuty kolejnych fragmentów dwóch zachowanych transkrypcji — bez nowych pobrań. [Lokalne narzędzie prescription](prescription.md) eksportuje dokładnie wskazaną listę ćwiczeń z jawnie wpisanymi dawkami; notatki terapeuty można dołączyć opcjonalnie. Nie jest jeszcze podłączone do generatora na stronie.
@@ -62,6 +64,8 @@ Kontrola publicznych metadanych i odnośników nowej partii działa bez budowani
 ```bash
 node examples/hartman-pl/verify-concrete-reviews.mjs
 node examples/hartman-pl/verify-concrete-reviews.mjs --followup
+node examples/hartman-pl/verify-concrete-reviews.mjs --decisions
+node examples/hartman-pl/verify-concrete-reviews.mjs --support
 ```
 
 Opcja `--captions /ścieżka/do/prywatnych/napisów` dodatkowo weryfikuje dokładne bajty i fragmenty źródeł. Pełne napisy nie są publikowane. Kontrola techniczna nie ocenia trafności klinicznej instrukcji ani obrazu wideo.
@@ -76,4 +80,4 @@ node scripts/rea.mjs evidence-import examples/hartman-pl/rea-evidence.json
 
 Budowanie CLI opisuje główne [README REA](../../README.md). Te komendy nie instalują silników analizy ani nie zmieniają konfiguracji agenta.
 
-Stan opracowania: 9 października 2026. Dwa filmy opisane w `filmy.md`, historyczny korpus 310 tekstów i partia najdłuższych filmów mają oddzielne zakresy oraz wersje źródeł. Dokumentacja każdego etapu podaje jego rzeczywiste pokrycie.
+Stan opracowania: 10 października 2026. Dwa filmy opisane w `filmy.md`, historyczny korpus 310 tekstów i partia najdłuższych filmów mają oddzielne zakresy oraz wersje źródeł. Dokumentacja każdego etapu podaje jego rzeczywiste pokrycie.

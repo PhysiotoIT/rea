@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checked_on": "2026-10-10",
+  "scope": "exact_caption_bytes_cues_and_document_references",
+  "source_count": 3,
+  "finding_count": 10,
+  "acquisition_count": 0,
+  "source_semantics": "Analyst reading; timing/hash checks do not establish clinical validity or visual accuracy."
+}
