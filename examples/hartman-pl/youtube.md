@@ -44,6 +44,43 @@ node examples/hartman-pl/youtube.mjs fetch \
 
 Wynik podaje rzeczywiste ścieżki napisów do przekazania do `import`. Katalog wyjściowy musi być nowy. Brak napisów, narzędzia albo błąd usługi kończy polecenie jawnym błędem. Dostęp z YouTube może zależeć od aktualnych ograniczeń serwisu. Ta ścieżka pobierania nie została sprawdzona z działającym `yt-dlp` w tej sesji; dwa rzeczywiste eksporty uzyskano przez przeglądarkę.
 
+## Pobranie napisów dla całego katalogu
+
+`fetch` obsługuje jeden film i wymaga nowego katalogu wyjściowego, więc nie nadaje się do
+ponownego zindeksowania korpusu. `corpus.mjs` potrzebuje z kolei katalogu filmów, którego nic
+w tym katalogu nie umiało odtworzyć. Dwie poniższe komendy wypełniają tę lukę.
+
+Katalog odtwarza się z opublikowanego raportu — kolejność kanału nie jest z raportu odtwarzalna,
+więc zindeksowane filmy zachowują swoją kolejność, a niedostępne idą za nimi:
+
+```bash
+node examples/hartman-pl/catalog-from-report.mjs \
+  --report examples/hartman-pl/korpus.json --out work/catalog.json
+```
+
+Pobranie jest wznawialne: film, który ma już plik `<video_id>.txt`, jest pomijany (`--force`
+wymusza ponowienie). `--manifest` zapisuje wynik dla `corpus.mjs --manifest` razem z jawnym
+powodem braku (limit zapytań, sprawdzanie bota, brak napisów, film niepubliczny).
+
+```bash
+node examples/hartman-pl/fetch-captions.mjs \
+  --catalog work/catalog.json --out work/captions --work work/scratch \
+  --manifest work/acquisition.json --report work/acquisition-report.json \
+  --delay 700 --retries 3 --verbose
+```
+
+Format pliku wyjściowego nie jest dowolny. Nagłówek (`YouTube transcript`, `Video ID`,
+`Language`, `Captions`), puste wiersze, `[m:ss]` z minutami bez wiodącego zera oraz LF bez
+znaku końca pliku — to dokładnie ten format, z którego powstał korpus przeglądarkowy.
+Rejestr przeglądu jest przypięty do skrótów transkrypcji, więc odstępstwo w jednym bajcie
+unieważniłoby wszystkie istniejące wnioski. Dlatego `--expect examples/hartman-pl/korpus.json`
+porównuje uzyskany skrót z zapisanym i raportuje każdą niezgodność zamiast po cichu podmieniać
+źródło.
+
+Pobranie nie wymaga klucza API. Wymaga `yt-dlp`; `--ytdlp-py ŚCIEŻKA` uruchamia je jako
+`python -m yt_dlp`, co bywa jedyną działającą postacią, gdy jednoplikowy `yt-dlp.exe` nie może
+rozpakować się do katalogu tymczasowego.
+
 ## Jak z fragmentów powstaje wiedza
 
 Przy każdej wypowiedzi ustalamy: czego dotyczy, co dokładnie twierdzi autor, jak wyjaśnić to zwykłymi słowami, czego wypowiedź nie dowodzi i czy trzeba obejrzeć obraz. Twierdzenia autora, nasze interpretacje i niewiadome mają osobne oznaczenia.
@@ -93,8 +130,11 @@ Pojedyncza klatka nie pokazuje przebiegu ruchu ani sił. Do oceny demonstracji n
 
 ```bash
 node examples/hartman-pl/verify-youtube.mjs
+node examples/hartman-pl/verify-fetch-captions.mjs
 ```
 
-Kontrola obejmuje cztery formaty napisów, identyfikator filmu, przedziały, nieaktualne adnotacje oraz rzeczywistą ścieżkę CLI od importu do wniosku. Dodatkowo sprawdzono generowanie klatek przez lokalny `ffmpeg` na własnym dwusekundowym nagraniu testowym. Nie jest to weryfikacja obrazu filmów Hartmana.
+Pierwsza kontrola obejmuje cztery formaty napisów, identyfikator filmu, przedziały, nieaktualne adnotacje oraz rzeczywistą ścieżkę CLI od importu do wniosku. Dodatkowo sprawdzono generowanie klatek przez lokalny `ffmpeg` na własnym dwusekundowym nagraniu testowym. Nie jest to weryfikacja obrazu filmów Hartmana.
+
+Druga kontrola nie uruchamia żadnego procesu potomnego i nie używa cudzej transkrypcji — działa więc także tam, gdzie `yt-dlp` nie ma. Pilnuje formatu wyjściowego (dokładny tekst i skrót), formatowania czasu, odrzucania zdarzeń pustych i bez `segs`, wyboru pliku napisów bez wariantu `-orig`, słownika powodów braku oraz odtwarzania katalogu. Sprawdza też, że zapisany plik czyta się z powrotem tym samym czytnikiem, którego używa `corpus.mjs`.
 
 Nowe pliki wyjściowe nie nadpisują istniejących. Pełne napisy, paczki do analizy i nagrania przechowuj lokalnie poza katalogiem publikowanych opracowań. Do repozytorium trafiają kod, odnośniki, krótkie opracowania, zakres odczytu i niewiadome.
