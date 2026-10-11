@@ -49,6 +49,13 @@ assert.equal(
 await harvestBatch([tab], job);
 assert.equal(exports, 1);
 await unlink(join(directory, entry.video_id + ".txt"));
+await harvestBatch([tab], job);
+assert.equal(exports, 2);
+assert.equal(
+  await readFile(join(directory, entry.video_id + ".txt"), "utf8"),
+  body,
+);
+await unlink(join(directory, entry.video_id + ".txt"));
 assert.equal((await restoreCopies(job.records, directory)).restored, 1);
 assert.equal((await restoreCopies(job.records, directory)).restored, 0);
 
@@ -89,6 +96,19 @@ const outside = { ...job, records: [], inventory: new Map() };
 await harvestBatch([tab], outside);
 assert.equal(outside.records[0].status, "error");
 assert.match(outside.records[0].reason, /validated inventory|outside/iu);
+let redirectedUrl = entry.url;
+const redirected = {
+  ...tab,
+  url: async () => redirectedUrl,
+  goto: async () => {
+    redirectedUrl = "https://www.google.com/sorry/index";
+  },
+};
+const redirectJob = { ...job, queue: [entry], cursor: 0, halt: false };
+const redirectResult = await harvestBatch([redirected], redirectJob);
+assert.equal(redirectResult.halt, true);
+assert.deepEqual(redirectResult.navigation_identity_errors, [entry.video_id]);
+await assert.rejects(harvestBatch([redirected], redirectJob), /halted/u);
 console.log(
-  "Browser driver fixture checks passed: source identity, resume, restore, no overwrite and stop on observed challenge. Actual browser acquisition is recorded separately.",
+  "Browser driver fixture checks passed: source identity, resume after missing copy, restore, no overwrite, stop on challenge and unexpected redirect. Actual browser acquisition is recorded separately.",
 );

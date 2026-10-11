@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "validation": "public_metadata_and_private_caption_bytes",
+  "priority_catalog": 24,
+  "selected_sources": 15,
+  "findings": 60,
+  "reviewed_caption_interval_seconds": 8880,
+  "report_sha256": "20e820d52b512e66dc1a557cbb3ccb5e0577238fea6ddf604670a29925a53395",
+  "reviews_sha256": "bbb7b5572aeabe11cb5ba49c760e1bfc9bd09cc81abdee3a24259b2d42357369",
+  "visual_reviewed": 0,
+  "clinical_validation": "not_performed"
+}
