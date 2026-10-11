@@ -4,15 +4,43 @@ Na kanale `@BillHartmanPT` 9 października 2026 r. zaobserwowano **937 unikalnyc
 
 Dokładne liczby pozyskanych i przetworzonych transkrypcji są w `korpus.json`. Cały tekst dostępnych napisów trafia do prywatnego indeksu. Publiczny raport zawiera metadane, skróty SHA-256, wyniki zliczeń i lokalizacje fragmentów. Pełnych cudzych transkrypcji nie publikujemy w repo.
 
-## Trzy różne zakresy analizy
+## Cztery różne zakresy analizy
 
 | Zakres | Co rzeczywiście wykonano | Czego z tego nie wyprowadzamy |
 | --- | --- | --- |
 | Inwentaryzacja | Odczyt pozycji z widocznych zakładek kanału, deduplikacja po identyfikatorze filmu. | Obecność filmu nie oznacza dostępności napisów. |
 | Analiza całego dostępnego tekstu | Import wypowiedzi z czasami, sprawdzenie tożsamości, indeks pojęć PL/EN, współwystępowanie w oknach 60 sekund, wykrywanie identycznego tekstu. | Dopasowanie słowa nie oznacza potwierdzenia mechanizmu ani pełnego zrozumienia filmu. |
 | Analiza znaczenia | Czytanie źródłowych fragmentów i zapisywanie parafraz z czasami oraz skrótem dokładnie użytej transkrypcji. Pole `scope` rozróżnia cały tekst napisów i wybrane okna. | Sprawdzenie wybranych fragmentów nie oznacza przeczytania całego filmu. Tekst nie zastępuje oceny demonstracji. |
+| Wstępny odczyt maszynowy | Przejście po tekście napisów, które dla każdego filmu zapisuje parafrazy z przedziałami czasu, typem wypowiedzi i jawnym ograniczeniem. Każdy wniosek jest sprawdzany względem dokładnych bajtów napisów przez `validateFindings`. | Pochodzi z tekstu, nie z obejrzenia nagrania, i **nie jest przeglądem wykonanym przez analityka**. `visual_review` nigdy nie przyjmuje tu wartości `reviewed`. |
 
-Rezultat dydaktyczny: [model po ludzku](model-po-ludzku.md). Sprawdzone znaczeniowo ustalenia: [przegląd korpusu](przeglad-korpusu.json). Wcześniejsze szczegółowe analizy dwóch filmów: [filmy](filmy.md).
+Rezultat dydaktyczny: [model po ludzku](model-po-ludzku.md). Sprawdzone znaczeniowo ustalenia: [przegląd korpusu](przeglad-korpusu.json). Wstępny odczyt maszynowy: [przegląd automatyczny](przeglad-automatyczny.json). Wcześniejsze szczegółowe analizy dwóch filmów: [filmy](filmy.md).
+
+## Rejestr wstępnego odczytu maszynowego
+
+`przeglad-automatyczny.json` ma ten sam kształt co `przeglad-korpusu.json` — tablicę wpisów
+`{video_id, transcript_sha256, scope, findings}` — ale inną proweniencję i dlatego osobny plik.
+Rozdzielenie jest celowe: gdyby oba trafiły do jednego rejestru, nie dałoby się odróżnić
+ustalenia analityka od parafrazy tekstu, a to najważniejsze rozróżnienie w tym materiale.
+
+Zasady, które ten rejestr musi spełniać:
+
+- Każdy wpis jest przypięty skrótem do dokładnych bajtów napisów, z których powstał.
+- Film, dla którego YouTube nie serwuje już wariantu napisów zapisanego w korpusie, zachowuje
+  własny skrót, ale niesie `caption_variant_differs_from_corpus` oraz `corpus_transcript_sha256`,
+  więc różnicę da się zobaczyć, a nie tylko jej zaufać.
+- `visual_review` przyjmuje wyłącznie `not_required` albo `pending`; weryfikator odrzuca
+  `reviewed`, bo obrazu nie oceniano.
+- `clinical_validation` jest zawsze `not_performed`.
+- Film bez treści merytorycznej (zapowiedź, promocja) nie dostaje wypychanych wniosków.
+
+```bash
+node examples/hartman-pl/verify-automatic-review.mjs \
+  --captions /path/to/private/captions
+```
+
+Bez `--captions` weryfikator sprawdza strukturę. Z `--captions` ponownie liczy skrót każdego
+pliku napisów i ponownie uruchamia `validateFindings`, czyli sprawdza dokładnie to, do czego
+rejestr się zobowiązuje.
 
 ## Co zlicza indeks?
 
