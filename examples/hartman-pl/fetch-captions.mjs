@@ -295,15 +295,57 @@ export async function main(args = process.argv.slice(2)) {
   let skipped = 0;
   let failed = 0;
 
+  /**
+   * Evidence is written after every video, not at the end: a bulk run over a
+   * real channel gets throttled or interrupted, and an interrupted run that
+   * kept its findings only in memory produces nothing usable.
+   */
+  const buildReport = () => ({
+    catalog: parsed.catalog,
+    language,
+    requested: entries.length,
+    processed: results.length,
+    acquired,
+    already_present: skipped,
+    failed,
+    fidelity: {
+      compared: fidelity.length,
+      matched: fidelity.filter((row) => row.match).length,
+      mismatched: fidelity.filter((row) => !row.match).map((row) => row.video_id),
+    },
+    results,
+  });
+
+  function persist() {
+    if (parsed.manifest)
+      writeFileSync(
+        resolve(parsed.manifest),
+        JSON.stringify({ results }, null, 2) + "\n",
+      );
+    if (parsed.report)
+      writeFileSync(
+        resolve(parsed.report),
+        JSON.stringify(buildReport(), null, 2) + "\n",
+      );
+  }
+
   for (const entry of entries) {
     const videoId = entry.video_id;
     const target = join(outDir, videoId + ".txt");
+    const want = expected.get(videoId);
+
     if (existsSync(target) && !parsed.force) {
-      const text = readFileSync(target, "utf8");
-      const want = expected.get(videoId);
-      if (want) fidelity.push({ video_id: videoId, match: digest(text) === want });
+      const got = digest(readFileSync(target, "utf8"));
+      if (want) fidelity.push({ video_id: videoId, match: got === want, got, want });
       skipped += 1;
-      results.push({ video_id: videoId, status: "already_present", reason: null });
+      results.push({
+        video_id: videoId,
+        status: "already_present",
+        reason: null,
+        digest_matches_recorded: want ? got === want : null,
+      });
+      if (parsed.verbose) console.log(`skip  ${videoId}  already present`);
+      persist();
       continue;
     }
 
@@ -317,7 +359,6 @@ export async function main(args = process.argv.slice(2)) {
 
     if (outcome.transcript !== null) {
       acquired += 1;
-      const want = expected.get(videoId);
       const got = digest(outcome.transcript);
       if (want) fidelity.push({ video_id: videoId, match: got === want, got, want });
       results.push({
@@ -342,32 +383,12 @@ export async function main(args = process.argv.slice(2)) {
       if (parsed.verbose)
         console.log(`fail  ${videoId}  ${outcome.status}: ${outcome.reason}`);
     }
+    persist();
     if (delay > 0) await sleep(delay);
   }
 
-  if (parsed.manifest)
-    writeFileSync(
-      resolve(parsed.manifest),
-      JSON.stringify({ results }, null, 2) + "\n",
-    );
-
-  const checked = fidelity.filter((row) => row.want !== undefined || row.match !== undefined);
-  const report = {
-    catalog: parsed.catalog,
-    language,
-    requested: entries.length,
-    acquired,
-    already_present: skipped,
-    failed,
-    fidelity: {
-      compared: fidelity.length,
-      matched: fidelity.filter((row) => row.match).length,
-      mismatched: fidelity.filter((row) => !row.match).map((row) => row.video_id),
-    },
-    results,
-  };
-  if (parsed.report)
-    writeFileSync(resolve(parsed.report), JSON.stringify(report, null, 2) + "\n");
+  persist();
+  const report = buildReport();
 
   console.log(
     JSON.stringify({

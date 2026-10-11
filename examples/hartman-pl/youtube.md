@@ -81,6 +81,13 @@ Pobranie nie wymaga klucza API. Wymaga `yt-dlp`; `--ytdlp-py ŚCIEŻKA` uruchami
 `python -m yt_dlp`, co bywa jedyną działającą postacią, gdy jednoplikowy `yt-dlp.exe` nie może
 rozpakować się do katalogu tymczasowego.
 
+Manifest i raport są zapisywane po każdej pozycji, nie na końcu, więc przebieg przerwany
+zachowuje to, co już ustalił. Ma to znaczenie w praktyce: przy kilkuset filmach YouTube
+zaczyna odpowiadać `HTTP 429` na samo pobranie strony filmu i dzieje się to niezależnie od
+tempa. Narzędzie czeka, ponawia i zapisuje wtedy `rate_limited` z jawnym powodem, zamiast
+twierdzić, że film nie ma napisów. Wznowienie jest tanie — film z gotowym `<video_id>.txt`
+jest pomijany — więc duży katalog rozsądnie jest pobierać partiami, a nie jednym przebiegiem.
+
 ## Jak z fragmentów powstaje wiedza
 
 Przy każdej wypowiedzi ustalamy: czego dotyczy, co dokładnie twierdzi autor, jak wyjaśnić to zwykłymi słowami, czego wypowiedź nie dowodzi i czy trzeba obejrzeć obraz. Twierdzenia autora, nasze interpretacje i niewiadome mają osobne oznaczenia.
