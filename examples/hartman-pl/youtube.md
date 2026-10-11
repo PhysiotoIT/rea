@@ -145,3 +145,15 @@ Pierwsza kontrola obejmuje cztery formaty napisów, identyfikator filmu, przedzi
 Druga kontrola nie uruchamia żadnego procesu potomnego i nie używa cudzej transkrypcji — działa więc także tam, gdzie `yt-dlp` nie ma. Pilnuje formatu wyjściowego (dokładny tekst i skrót), formatowania czasu, odrzucania zdarzeń pustych i bez `segs`, wyboru pliku napisów bez wariantu `-orig`, słownika powodów braku oraz odtwarzania katalogu. Sprawdza też, że zapisany plik czyta się z powrotem tym samym czytnikiem, którego używa `corpus.mjs`.
 
 Nowe pliki wyjściowe nie nadpisują istniejących. Pełne napisy, paczki do analizy i nagrania przechowuj lokalnie poza katalogiem publikowanych opracowań. Do repozytorium trafiają kod, odnośniki, krótkie opracowania, zakres odczytu i niewiadome.
+
+## Wznawianie pobierania przez przeglądarkę
+
+`browser-corpus.mjs` jest sterownikiem dla już wybranych kart w `cua_repl` i dokumentowanego eksportu transkrypcji. Przed pominięciem wcześniej pozyskanego filmu sprawdza, czy lokalna kopia faktycznie istnieje i ma właściwy identyfikator. Wpis w historycznym rejestrze bez pliku nie jest kompletnym źródłem; sterownik ponawia eksport zamiast oznaczać go jako zachowany. Jeśli istniejący plik różni się od nowego eksportu, zatrzymuje zapis i zachowuje wcześniejszą wersję.
+
+Po przejściu do następnej partii sprawdza również tożsamość otwartych filmów. Nieoczekiwane przekierowanie zatrzymuje kolejkę do oceny aktualnej strony. Samo przekierowanie nie jest automatycznym rozpoznaniem blokady botów; takie rozpoznanie wymaga komunikatu strony. Zatrzymana partia nie uruchamia dalszych prób automatycznie.
+
+```bash
+node examples/hartman-pl/verify-browser-corpus.mjs
+```
+
+Kontrola wykorzystuje własne dane testowe: brak kopii przy zachowanych metadanych, właściwy identyfikator, konflikt wersji, przywracanie kopii, komunikat weryfikacyjny i nieoczekiwane przekierowanie. Nie dowodzi aktualnej dostępności napisów YouTube. Stan ostatniej próby i nieotwartą część kolejki zapisuje [rejestr dalszych analiz](progresje-filmy.json).
