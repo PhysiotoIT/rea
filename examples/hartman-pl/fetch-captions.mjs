@@ -31,6 +31,13 @@
  * selects `python -m yt_dlp` instead of a `yt-dlp` executable, which is the
  * only working option inside a sandbox that denies the PyInstaller one-file
  * bootloader a writable extraction directory.
+ *
+ * `--cookies-from-browser BROWSER` (or `--cookies FILE`) makes yt-dlp act as a
+ * signed-in session. Anonymous bulk traffic is what YouTube throttles first, so
+ * for a large catalog this is the difference between a slow trickle of HTTP 429
+ * and a run that finishes. It hands the tool the credentials already stored in a
+ * browser profile, so the caller decides whether to allow it; nothing is read
+ * unless the option is passed.
  */
 
 import { createHash } from "node:crypto";
@@ -215,6 +222,14 @@ function acquireOne(engine, entry, parsed, workDir, outDir, language) {
     langs,
     "--sub-format",
     "json3",
+    // Anonymous bulk traffic is what YouTube throttles first. When the caller
+    // supplies a browser to read cookies from, yt-dlp acts as that signed-in
+    // session instead, which is the only reliable way through a sustained HTTP
+    // 429. The caller decides whether to hand over those credentials.
+    ...(parsed["cookies-from-browser"]
+      ? ["--cookies-from-browser", parsed["cookies-from-browser"]]
+      : []),
+    ...(parsed["cookies"] ? ["--cookies", parsed["cookies"]] : []),
     "--cache-dir",
     join(workDir, "cache"),
     "--output",
@@ -268,6 +283,8 @@ export async function main(args = process.argv.slice(2)) {
       "caption-kind",
       "ytdlp",
       "ytdlp-py",
+      "cookies-from-browser",
+      "cookies",
     ],
     new Set(["force", "verbose"]),
   );
